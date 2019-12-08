@@ -37,6 +37,10 @@ IF NOT EXIST %NAME%-%VERSION% (
 	ECHO directory %NAME%-%VERSION% exists. skip extract.
 )
 
+PUSHD %NAME%-%VERSION%
+patch -p1 --binary -i ..\VS-2019.patch
+POPD
+
 PUSHD %NAME%-%VERSION%\PCbuild
 IF NOT EXIST amd64\python.exe (
 	ECHO build python.exe

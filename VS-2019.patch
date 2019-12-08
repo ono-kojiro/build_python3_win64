@@ -1,0 +1,2869 @@
+diff -crp Python-3.7.5-orig/PCbuild/_asyncio.vcxproj Python-3.7.5/PCbuild/_asyncio.vcxproj
+*** Python-3.7.5-orig/PCbuild/_asyncio.vcxproj	Tue Oct 15 07:32:36 2019
+--- Python-3.7.5/PCbuild/_asyncio.vcxproj	Sun Dec  8 05:39:35 2019
+***************
+*** 38,43 ****
+--- 38,44 ----
+      <ProjectGuid>{384C224A-7474-476E-A01B-750EA7DE918C}</ProjectGuid>
+      <RootNamespace>_asyncio</RootNamespace>
+      <Keyword>Win32Proj</Keyword>
++     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    </PropertyGroup>
+    <Import Project="python.props" />
+    <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+***************
+*** 45,50 ****
+--- 46,75 ----
+      <ConfigurationType>DynamicLibrary</ConfigurationType>
+      <CharacterSet>NotSet</CharacterSet>
+    </PropertyGroup>
++   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
++     <PlatformToolset>v142</PlatformToolset>
++   </PropertyGroup>
++   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
++     <PlatformToolset>v142</PlatformToolset>
++   </PropertyGroup>
++   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
++     <PlatformToolset>v142</PlatformToolset>
++   </PropertyGroup>
++   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
++     <PlatformToolset>v142</PlatformToolset>
++   </PropertyGroup>
++   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='PGUpdate|x64'">
++     <PlatformToolset>v142</PlatformToolset>
++   </PropertyGroup>
++   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='PGUpdate|Win32'">
++     <PlatformToolset>v142</PlatformToolset>
++   </PropertyGroup>
++   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='PGInstrument|x64'">
++     <PlatformToolset>v142</PlatformToolset>
++   </PropertyGroup>
++   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='PGInstrument|Win32'">
++     <PlatformToolset>v142</PlatformToolset>
++   </PropertyGroup>
+    <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+    <PropertyGroup>
+      <TargetExt>.pyd</TargetExt>
+***************
+*** 74,77 ****
+    <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+    <ImportGroup Label="ExtensionTargets">
+    </ImportGroup>
+! </Project>
+--- 99,102 ----
+    <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+    <ImportGroup Label="ExtensionTargets">
+    </ImportGroup>
+! </Project>
+\ No newline at end of file
+Only in Python-3.7.5-orig/PCbuild: _asyncio.vcxproj.orig
+Only in Python-3.7.5-orig/PCbuild: _asyncio.vcxproj.rej
+diff -crp Python-3.7.5-orig/PCbuild/_bz2.vcxproj Python-3.7.5/PCbuild/_bz2.vcxproj
+*** Python-3.7.5-orig/PCbuild/_bz2.vcxproj	Tue Oct 15 07:32:36 2019
+--- Python-3.7.5/PCbuild/_bz2.vcxproj	Sun Dec  8 05:39:21 2019
+***************
+*** 38,43 ****
+--- 38,44 ----
+      <ProjectGuid>{73FCD2BD-F133-46B7-8EC1-144CD82A59D5}</ProjectGuid>
+      <RootNamespace>bz2</RootNamespace>
+      <Keyword>Win32Proj</Keyword>
++     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    </PropertyGroup>
+    <Import Project="python.props" />
+    <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+***************
+*** 45,51 ****
+      <ConfigurationType>DynamicLibrary</ConfigurationType>
+      <CharacterSet>NotSet</CharacterSet>
+    </PropertyGroup>
+!   <PropertyGroup Label="Configuration" />
+    <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+    <PropertyGroup>
+      <TargetExt>.pyd</TargetExt>
+--- 46,75 ----
+      <ConfigurationType>DynamicLibrary</ConfigurationType>
+      <CharacterSet>NotSet</CharacterSet>
+    </PropertyGroup>
+!   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+!     <PlatformToolset>v142</PlatformToolset>
+!   </PropertyGroup>
+!   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+!     <PlatformToolset>v142</PlatformToolset>
+!   </PropertyGroup>
+!   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+!     <PlatformToolset>v142</PlatformToolset>
+!   </PropertyGroup>
+!   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+!     <PlatformToolset>v142</PlatformToolset>
+!   </PropertyGroup>
+!   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='PGUpdate|x64'">
+!     <PlatformToolset>v142</PlatformToolset>
+!   </PropertyGroup>
+!   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='PGUpdate|Win32'">
+!     <PlatformToolset>v142</PlatformToolset>
+!   </PropertyGroup>
+!   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='PGInstrument|x64'">
+!     <PlatformToolset>v142</PlatformToolset>
+!   </PropertyGroup>
+!   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='PGInstrument|Win32'">
+!     <PlatformToolset>v142</PlatformToolset>
+!   </PropertyGroup>
+    <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+    <PropertyGroup>
+      <TargetExt>.pyd</TargetExt>
+diff -crp Python-3.7.5-orig/PCbuild/_bz2.vcxproj.filters Python-3.7.5/PCbuild/_bz2.vcxproj.filters
+*** Python-3.7.5-orig/PCbuild/_bz2.vcxproj.filters	Tue Oct 15 07:32:36 2019
+--- Python-3.7.5/PCbuild/_bz2.vcxproj.filters	Sun Dec  8 05:39:21 2019
+***************
+*** 45,48 ****
+        <Filter>bzip2 1.0.6 Header Files</Filter>
+      </ClInclude>
+    </ItemGroup>
+! </Project>
+--- 45,51 ----
+        <Filter>bzip2 1.0.6 Header Files</Filter>
+      </ClInclude>
+    </ItemGroup>
+!   <ItemGroup>
+!     <ResourceCompile Include="..\PC\python_nt.rc" />
+!   </ItemGroup>
+! </Project>
+\ No newline at end of file
+Only in Python-3.7.5-orig/PCbuild: _bz2.vcxproj.filters.orig
+Only in Python-3.7.5-orig/PCbuild: _bz2.vcxproj.filters.rej
+Only in Python-3.7.5-orig/PCbuild: _bz2.vcxproj.orig
+Only in Python-3.7.5-orig/PCbuild: _bz2.vcxproj.rej
+diff -crp Python-3.7.5-orig/PCbuild/_ctypes.vcxproj Python-3.7.5/PCbuild/_ctypes.vcxproj
+*** Python-3.7.5-orig/PCbuild/_ctypes.vcxproj	Tue Oct 15 07:32:36 2019
+--- Python-3.7.5/PCbuild/_ctypes.vcxproj	Sun Dec  8 05:39:14 2019
+***************
+*** 38,43 ****
+--- 38,44 ----
+      <ProjectGuid>{0E9791DB-593A-465F-98BC-681011311618}</ProjectGuid>
+      <RootNamespace>_ctypes</RootNamespace>
+      <Keyword>Win32Proj</Keyword>
++     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    </PropertyGroup>
+    <Import Project="python.props" />
+    <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+***************
+*** 45,50 ****
+--- 46,75 ----
+      <ConfigurationType>DynamicLibrary</ConfigurationType>
+      <CharacterSet>NotSet</CharacterSet>
+    </PropertyGroup>
++   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
++     <PlatformToolset>v142</PlatformToolset>
++   </PropertyGroup>
++   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
++     <PlatformToolset>v142</PlatformToolset>
++   </PropertyGroup>
++   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
++     <PlatformToolset>v142</PlatformToolset>
++   </PropertyGroup>
++   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
++     <PlatformToolset>v142</PlatformToolset>
++   </PropertyGroup>
++   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='PGUpdate|x64'">
++     <PlatformToolset>v142</PlatformToolset>
++   </PropertyGroup>
++   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='PGUpdate|Win32'">
++     <PlatformToolset>v142</PlatformToolset>
++   </PropertyGroup>
++   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='PGInstrument|x64'">
++     <PlatformToolset>v142</PlatformToolset>
++   </PropertyGroup>
++   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='PGInstrument|Win32'">
++     <PlatformToolset>v142</PlatformToolset>
++   </PropertyGroup>
+    <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+    <PropertyGroup>
+      <TargetExt>.pyd</TargetExt>
+diff -crp Python-3.7.5-orig/PCbuild/_ctypes.vcxproj.filters Python-3.7.5/PCbuild/_ctypes.vcxproj.filters
+*** Python-3.7.5-orig/PCbuild/_ctypes.vcxproj.filters	Tue Oct 15 07:32:36 2019
+--- Python-3.7.5/PCbuild/_ctypes.vcxproj.filters	Sun Dec  8 05:39:14 2019
+***************
+*** 62,65 ****
+--- 62,68 ----
+        <Filter>Source Files</Filter>
+      </CustomBuild>
+    </ItemGroup>
++   <ItemGroup>
++     <ResourceCompile Include="..\PC\python_nt.rc" />
++   </ItemGroup>
+  </Project>
+\ No newline at end of file
+Only in Python-3.7.5-orig/PCbuild: _ctypes.vcxproj.filters.orig
+Only in Python-3.7.5-orig/PCbuild: _ctypes.vcxproj.filters.rej
+Only in Python-3.7.5-orig/PCbuild: _ctypes.vcxproj.orig
+Only in Python-3.7.5-orig/PCbuild: _ctypes.vcxproj.rej
+diff -crp Python-3.7.5-orig/PCbuild/_ctypes_test.vcxproj Python-3.7.5/PCbuild/_ctypes_test.vcxproj
+*** Python-3.7.5-orig/PCbuild/_ctypes_test.vcxproj	Tue Oct 15 07:32:36 2019
+--- Python-3.7.5/PCbuild/_ctypes_test.vcxproj	Sun Dec  8 05:39:14 2019
+***************
+*** 39,44 ****
+--- 39,45 ----
+      <RootNamespace>_ctypes_test</RootNamespace>
+      <Keyword>Win32Proj</Keyword>
+      <SupportPGO>false</SupportPGO>
++     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    </PropertyGroup>
+    <Import Project="python.props" />
+    <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+***************
+*** 46,51 ****
+--- 47,76 ----
+      <ConfigurationType>DynamicLibrary</ConfigurationType>
+      <CharacterSet>NotSet</CharacterSet>
+    </PropertyGroup>
++   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
++     <PlatformToolset>v142</PlatformToolset>
++   </PropertyGroup>
++   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
++     <PlatformToolset>v142</PlatformToolset>
++   </PropertyGroup>
++   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
++     <PlatformToolset>v142</PlatformToolset>
++   </PropertyGroup>
++   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
++     <PlatformToolset>v142</PlatformToolset>
++   </PropertyGroup>
++   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='PGUpdate|x64'">
++     <PlatformToolset>v142</PlatformToolset>
++   </PropertyGroup>
++   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='PGUpdate|Win32'">
++     <PlatformToolset>v142</PlatformToolset>
++   </PropertyGroup>
++   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='PGInstrument|x64'">
++     <PlatformToolset>v142</PlatformToolset>
++   </PropertyGroup>
++   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='PGInstrument|Win32'">
++     <PlatformToolset>v142</PlatformToolset>
++   </PropertyGroup>
+    <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+    <PropertyGroup>
+      <TargetExt>.pyd</TargetExt>
+diff -crp Python-3.7.5-orig/PCbuild/_ctypes_test.vcxproj.filters Python-3.7.5/PCbuild/_ctypes_test.vcxproj.filters
+*** Python-3.7.5-orig/PCbuild/_ctypes_test.vcxproj.filters	Tue Oct 15 07:32:36 2019
+--- Python-3.7.5/PCbuild/_ctypes_test.vcxproj.filters	Sun Dec  8 05:39:14 2019
+***************
+*** 18,21 ****
+--- 18,24 ----
+        <Filter>Source Files</Filter>
+      </ClCompile>
+    </ItemGroup>
++   <ItemGroup>
++     <ResourceCompile Include="..\PC\python_nt.rc" />
++   </ItemGroup>
+  </Project>
+\ No newline at end of file
+Only in Python-3.7.5-orig/PCbuild: _ctypes_test.vcxproj.filters.orig
+Only in Python-3.7.5-orig/PCbuild: _ctypes_test.vcxproj.filters.rej
+Only in Python-3.7.5-orig/PCbuild: _ctypes_test.vcxproj.orig
+Only in Python-3.7.5-orig/PCbuild: _ctypes_test.vcxproj.rej
+diff -crp Python-3.7.5-orig/PCbuild/_decimal.vcxproj Python-3.7.5/PCbuild/_decimal.vcxproj
+*** Python-3.7.5-orig/PCbuild/_decimal.vcxproj	Tue Oct 15 07:32:36 2019
+--- Python-3.7.5/PCbuild/_decimal.vcxproj	Sun Dec  8 05:39:13 2019
+***************
+*** 38,43 ****
+--- 38,44 ----
+      <ProjectGuid>{0E9791DB-593A-465F-98BC-681011311617}</ProjectGuid>
+      <RootNamespace>_decimal</RootNamespace>
+      <Keyword>Win32Proj</Keyword>
++     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    </PropertyGroup>
+    <Import Project="python.props" />
+    <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+***************
+*** 45,50 ****
+--- 46,75 ----
+      <ConfigurationType>DynamicLibrary</ConfigurationType>
+      <CharacterSet>NotSet</CharacterSet>
+    </PropertyGroup>
++   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
++     <PlatformToolset>v142</PlatformToolset>
++   </PropertyGroup>
++   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
++     <PlatformToolset>v142</PlatformToolset>
++   </PropertyGroup>
++   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
++     <PlatformToolset>v142</PlatformToolset>
++   </PropertyGroup>
++   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
++     <PlatformToolset>v142</PlatformToolset>
++   </PropertyGroup>
++   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='PGUpdate|x64'">
++     <PlatformToolset>v142</PlatformToolset>
++   </PropertyGroup>
++   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='PGUpdate|Win32'">
++     <PlatformToolset>v142</PlatformToolset>
++   </PropertyGroup>
++   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='PGInstrument|x64'">
++     <PlatformToolset>v142</PlatformToolset>
++   </PropertyGroup>
++   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='PGInstrument|Win32'">
++     <PlatformToolset>v142</PlatformToolset>
++   </PropertyGroup>
+    <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+    <PropertyGroup>
+      <TargetExt>.pyd</TargetExt>
+***************
+*** 121,124 ****
+    <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+    <ImportGroup Label="ExtensionTargets">
+    </ImportGroup>
+! </Project>
+--- 146,149 ----
+    <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+    <ImportGroup Label="ExtensionTargets">
+    </ImportGroup>
+! </Project>
+\ No newline at end of file
+diff -crp Python-3.7.5-orig/PCbuild/_decimal.vcxproj.filters Python-3.7.5/PCbuild/_decimal.vcxproj.filters
+*** Python-3.7.5-orig/PCbuild/_decimal.vcxproj.filters	Tue Oct 15 07:32:36 2019
+--- Python-3.7.5/PCbuild/_decimal.vcxproj.filters	Sun Dec  8 05:39:13 2019
+***************
+*** 113,116 ****
+--- 113,119 ----
+        <Filter>Source Files</Filter>
+      </CustomBuild>
+    </ItemGroup>
++   <ItemGroup>
++     <ResourceCompile Include="..\PC\python_nt.rc" />
++   </ItemGroup>
+  </Project>
+\ No newline at end of file
+Only in Python-3.7.5-orig/PCbuild: _decimal.vcxproj.filters.orig
+Only in Python-3.7.5-orig/PCbuild: _decimal.vcxproj.filters.rej
+Only in Python-3.7.5-orig/PCbuild: _decimal.vcxproj.orig
+Only in Python-3.7.5-orig/PCbuild: _decimal.vcxproj.rej
+diff -crp Python-3.7.5-orig/PCbuild/_elementtree.vcxproj Python-3.7.5/PCbuild/_elementtree.vcxproj
+*** Python-3.7.5-orig/PCbuild/_elementtree.vcxproj	Tue Oct 15 07:32:36 2019
+--- Python-3.7.5/PCbuild/_elementtree.vcxproj	Sun Dec  8 05:39:15 2019
+***************
+*** 38,43 ****
+--- 38,44 ----
+      <ProjectGuid>{17E1E049-C309-4D79-843F-AE483C264AEA}</ProjectGuid>
+      <RootNamespace>_elementtree</RootNamespace>
+      <Keyword>Win32Proj</Keyword>
++     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    </PropertyGroup>
+    <Import Project="python.props" />
+    <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+***************
+*** 45,50 ****
+--- 46,75 ----
+      <ConfigurationType>DynamicLibrary</ConfigurationType>
+      <CharacterSet>NotSet</CharacterSet>
+    </PropertyGroup>
++   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
++     <PlatformToolset>v142</PlatformToolset>
++   </PropertyGroup>
++   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
++     <PlatformToolset>v142</PlatformToolset>
++   </PropertyGroup>
++   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
++     <PlatformToolset>v142</PlatformToolset>
++   </PropertyGroup>
++   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
++     <PlatformToolset>v142</PlatformToolset>
++   </PropertyGroup>
++   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='PGUpdate|x64'">
++     <PlatformToolset>v142</PlatformToolset>
++   </PropertyGroup>
++   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='PGUpdate|Win32'">
++     <PlatformToolset>v142</PlatformToolset>
++   </PropertyGroup>
++   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='PGInstrument|x64'">
++     <PlatformToolset>v142</PlatformToolset>
++   </PropertyGroup>
++   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='PGInstrument|Win32'">
++     <PlatformToolset>v142</PlatformToolset>
++   </PropertyGroup>
+    <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+    <PropertyGroup>
+      <TargetExt>.pyd</TargetExt>
+***************
+*** 100,103 ****
+    <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+    <ImportGroup Label="ExtensionTargets">
+    </ImportGroup>
+! </Project>
+--- 125,128 ----
+    <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+    <ImportGroup Label="ExtensionTargets">
+    </ImportGroup>
+! </Project>
+\ No newline at end of file
+diff -crp Python-3.7.5-orig/PCbuild/_elementtree.vcxproj.filters Python-3.7.5/PCbuild/_elementtree.vcxproj.filters
+*** Python-3.7.5-orig/PCbuild/_elementtree.vcxproj.filters	Tue Oct 15 07:32:36 2019
+--- Python-3.7.5/PCbuild/_elementtree.vcxproj.filters	Sun Dec  8 05:39:15 2019
+***************
+*** 69,72 ****
+        <Filter>Source Files</Filter>
+      </ClCompile>
+    </ItemGroup>
+! </Project>
+--- 69,75 ----
+        <Filter>Source Files</Filter>
+      </ClCompile>
+    </ItemGroup>
+!   <ItemGroup>
+!     <ResourceCompile Include="..\PC\python_nt.rc" />
+!   </ItemGroup>
+! </Project>
+\ No newline at end of file
+Only in Python-3.7.5-orig/PCbuild: _elementtree.vcxproj.filters.orig
+Only in Python-3.7.5-orig/PCbuild: _elementtree.vcxproj.filters.rej
+Only in Python-3.7.5-orig/PCbuild: _elementtree.vcxproj.orig
+Only in Python-3.7.5-orig/PCbuild: _elementtree.vcxproj.rej
+diff -crp Python-3.7.5-orig/PCbuild/_freeze_importlib.vcxproj Python-3.7.5/PCbuild/_freeze_importlib.vcxproj
+*** Python-3.7.5-orig/PCbuild/_freeze_importlib.vcxproj	Tue Oct 15 07:32:36 2019
+--- Python-3.7.5/PCbuild/_freeze_importlib.vcxproj	Sun Dec  8 05:39:31 2019
+***************
+*** 39,44 ****
+--- 39,45 ----
+      <Keyword>Win32Proj</Keyword>
+      <RootNamespace>_freeze_importlib</RootNamespace>
+      <SupportPGO>false</SupportPGO>
++     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    </PropertyGroup>
+    <Import Project="python.props" />
+    <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+***************
+*** 46,51 ****
+--- 47,76 ----
+      <ConfigurationType>Application</ConfigurationType>
+      <CharacterSet>Unicode</CharacterSet>
+    </PropertyGroup>
++   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
++     <PlatformToolset>v142</PlatformToolset>
++   </PropertyGroup>
++   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
++     <PlatformToolset>v142</PlatformToolset>
++   </PropertyGroup>
++   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
++     <PlatformToolset>v142</PlatformToolset>
++   </PropertyGroup>
++   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
++     <PlatformToolset>v142</PlatformToolset>
++   </PropertyGroup>
++   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='PGUpdate|x64'">
++     <PlatformToolset>v142</PlatformToolset>
++   </PropertyGroup>
++   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='PGUpdate|Win32'">
++     <PlatformToolset>v142</PlatformToolset>
++   </PropertyGroup>
++   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='PGInstrument|x64'">
++     <PlatformToolset>v142</PlatformToolset>
++   </PropertyGroup>
++   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='PGInstrument|Win32'">
++     <PlatformToolset>v142</PlatformToolset>
++   </PropertyGroup>
+    <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+    <ImportGroup Label="ExtensionSettings">
+    </ImportGroup>
+***************
+*** 89,114 ****
+    <ImportGroup Label="ExtensionTargets">
+    </ImportGroup>
+    <Target Name="_RebuildImportLib">
+!     <Exec Command='"$(TargetPath)" "%(None.FullPath)" "%(None.IntFile)"' />
+!     
+      <PropertyGroup>
+!       <_OldContent Condition="Exists($(OutTargetPath))"></_OldContent>
+!       <_NewContent Condition="Exists($(IntTargetPath))">$([System.IO.File]::ReadAllText($(IntTargetPath)).Replace(`&#x0D;&#x0A;`, `&#x0A;`))</_NewContent>
+      </PropertyGroup>
+!     
+!     <Copy SourceFiles="%(None.IntFile)"
+!           DestinationFiles="%(None.OutFile)"
+!           Condition="!Exists(%(None.OutFile)) or (Exists(%(None.IntFile)) and '$([System.IO.File]::ReadAllText(%(None.OutFile)).Replace(`&#x0D;&#x0A;`, `&#x0A;`))' != '$([System.IO.File]::ReadAllText(%(None.IntFile)).Replace(`&#x0D;&#x0A;`, `&#x0A;`))')">
+        <Output TaskParameter="CopiedFiles" ItemName="_Updated" />
+      </Copy>
+!     
+!     <Warning Text="@(_Updated->'%(Filename)%(Extension)',', ') updated. You will need to rebuild pythoncore to see the changes."
+!              Condition="'@(_Updated)' != '' and $(Configuration) == 'Debug'" />
+!     <Error Text="@(_Updated->'%(Filename)%(Extension)',', ') updated. You will need to rebuild pythoncore to see the changes."
+!            Condition="'@(_Updated)' != '' and $(Configuration) == 'Release'" />
+    </Target>
+!   <Target Name="RebuildImportLib" AfterTargets="AfterBuild" Condition="$(Configuration) == 'Debug' or $(Configuration) == 'Release'"
+!           DependsOnTargets="_RebuildImportLib">
+    </Target>
+    <Target Name="_CleanImportLib" BeforeTargets="CoreClean">
+      <ItemGroup>
+--- 114,134 ----
+    <ImportGroup Label="ExtensionTargets">
+    </ImportGroup>
+    <Target Name="_RebuildImportLib">
+!     <Exec Command="&quot;$(TargetPath)&quot; &quot;%(None.FullPath)&quot; &quot;%(None.IntFile)&quot;" />
+      <PropertyGroup>
+!       <_OldContent Condition="Exists($(OutTargetPath))">
+!       </_OldContent>
+!       <_NewContent Condition="Exists($(IntTargetPath))">$([System.IO.File]::ReadAllText($(IntTargetPath)).Replace(`
+! `, `
+! `))</_NewContent>
+      </PropertyGroup>
+!     <Copy SourceFiles="%(None.IntFile)" DestinationFiles="%(None.OutFile)" Condition="!Exists(%(None.OutFile)) or (Exists(%(None.IntFile)) and '$([System.IO.File]::ReadAllText(%(None.OutFile)).Replace(`&#xD;&#xA;`, `&#xA;`))' != '$([System.IO.File]::ReadAllText(%(None.IntFile)).Replace(`&#xD;&#xA;`, `&#xA;`))')">
+        <Output TaskParameter="CopiedFiles" ItemName="_Updated" />
+      </Copy>
+!     <Warning Text="@(_Updated->'%(Filename)%(Extension)',', ') updated. You will need to rebuild pythoncore to see the changes." Condition="'@(_Updated)' != '' and $(Configuration) == 'Debug'" />
+!     <Error Text="@(_Updated->'%(Filename)%(Extension)',', ') updated. You will need to rebuild pythoncore to see the changes." Condition="'@(_Updated)' != '' and $(Configuration) == 'Release'" />
+    </Target>
+!   <Target Name="RebuildImportLib" AfterTargets="AfterBuild" Condition="$(Configuration) == 'Debug' or $(Configuration) == 'Release'" DependsOnTargets="_RebuildImportLib">
+    </Target>
+    <Target Name="_CleanImportLib" BeforeTargets="CoreClean">
+      <ItemGroup>
+***************
+*** 116,119 ****
+        <Clean Include="$(IntDir)importlib_external.g.h" />
+      </ItemGroup>
+    </Target>
+! </Project>
+--- 136,139 ----
+        <Clean Include="$(IntDir)importlib_external.g.h" />
+      </ItemGroup>
+    </Target>
+! </Project>
+\ No newline at end of file
+diff -crp Python-3.7.5-orig/PCbuild/_freeze_importlib.vcxproj.filters Python-3.7.5/PCbuild/_freeze_importlib.vcxproj.filters
+*** Python-3.7.5-orig/PCbuild/_freeze_importlib.vcxproj.filters	Tue Oct 15 07:32:36 2019
+--- Python-3.7.5/PCbuild/_freeze_importlib.vcxproj.filters	Sun Dec  8 05:39:31 2019
+***************
+*** 23,27 ****
+      <None Include="..\Lib\importlib\_bootstrap.py">
+        <Filter>Source Files</Filter>
+      </None>
+    </ItemGroup>
+! </Project>
+--- 23,28 ----
+      <None Include="..\Lib\importlib\_bootstrap.py">
+        <Filter>Source Files</Filter>
+      </None>
++     <None Include="..\Lib\importlib\_bootstrap_external.py" />
+    </ItemGroup>
+! </Project>
+\ No newline at end of file
+Only in Python-3.7.5-orig/PCbuild: _freeze_importlib.vcxproj.filters.orig
+Only in Python-3.7.5-orig/PCbuild: _freeze_importlib.vcxproj.filters.rej
+Only in Python-3.7.5-orig/PCbuild: _freeze_importlib.vcxproj.orig
+Only in Python-3.7.5-orig/PCbuild: _freeze_importlib.vcxproj.rej
+diff -crp Python-3.7.5-orig/PCbuild/_hashlib.vcxproj Python-3.7.5/PCbuild/_hashlib.vcxproj
+*** Python-3.7.5-orig/PCbuild/_hashlib.vcxproj	Tue Oct 15 07:32:36 2019
+--- Python-3.7.5/PCbuild/_hashlib.vcxproj	Sun Dec  8 05:39:26 2019
+***************
+*** 38,43 ****
+--- 38,44 ----
+      <ProjectGuid>{447F05A8-F581-4CAC-A466-5AC7936E207E}</ProjectGuid>
+      <RootNamespace>_hashlib</RootNamespace>
+      <Keyword>Win32Proj</Keyword>
++     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    </PropertyGroup>
+    <Import Project="python.props" />
+    <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+***************
+*** 45,50 ****
+--- 46,75 ----
+      <ConfigurationType>DynamicLibrary</ConfigurationType>
+      <CharacterSet>NotSet</CharacterSet>
+    </PropertyGroup>
++   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
++     <PlatformToolset>v142</PlatformToolset>
++   </PropertyGroup>
++   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
++     <PlatformToolset>v142</PlatformToolset>
++   </PropertyGroup>
++   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
++     <PlatformToolset>v142</PlatformToolset>
++   </PropertyGroup>
++   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
++     <PlatformToolset>v142</PlatformToolset>
++   </PropertyGroup>
++   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='PGUpdate|x64'">
++     <PlatformToolset>v142</PlatformToolset>
++   </PropertyGroup>
++   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='PGUpdate|Win32'">
++     <PlatformToolset>v142</PlatformToolset>
++   </PropertyGroup>
++   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='PGInstrument|x64'">
++     <PlatformToolset>v142</PlatformToolset>
++   </PropertyGroup>
++   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='PGInstrument|Win32'">
++     <PlatformToolset>v142</PlatformToolset>
++   </PropertyGroup>
+    <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+    <PropertyGroup>
+      <TargetExt>.pyd</TargetExt>
+***************
+*** 80,83 ****
+    <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+    <ImportGroup Label="ExtensionTargets">
+    </ImportGroup>
+! </Project>
+--- 105,108 ----
+    <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+    <ImportGroup Label="ExtensionTargets">
+    </ImportGroup>
+! </Project>
+\ No newline at end of file
+diff -crp Python-3.7.5-orig/PCbuild/_hashlib.vcxproj.filters Python-3.7.5/PCbuild/_hashlib.vcxproj.filters
+*** Python-3.7.5-orig/PCbuild/_hashlib.vcxproj.filters	Tue Oct 15 07:32:36 2019
+--- Python-3.7.5/PCbuild/_hashlib.vcxproj.filters	Sun Dec  8 05:39:26 2019
+***************
+*** 10,13 ****
+--- 10,16 ----
+        <Filter>Source Files</Filter>
+      </ClCompile>
+    </ItemGroup>
++   <ItemGroup>
++     <ResourceCompile Include="..\PC\python_nt.rc" />
++   </ItemGroup>
+  </Project>
+\ No newline at end of file
+Only in Python-3.7.5-orig/PCbuild: _hashlib.vcxproj.filters.orig
+Only in Python-3.7.5-orig/PCbuild: _hashlib.vcxproj.filters.rej
+Only in Python-3.7.5-orig/PCbuild: _hashlib.vcxproj.orig
+Only in Python-3.7.5-orig/PCbuild: _hashlib.vcxproj.rej
+diff -crp Python-3.7.5-orig/PCbuild/_lzma.vcxproj Python-3.7.5/PCbuild/_lzma.vcxproj
+*** Python-3.7.5-orig/PCbuild/_lzma.vcxproj	Tue Oct 15 07:32:36 2019
+--- Python-3.7.5/PCbuild/_lzma.vcxproj	Sun Dec  8 05:39:22 2019
+***************
+*** 38,43 ****
+--- 38,44 ----
+      <ProjectGuid>{F9D71780-F393-11E0-BE50-0800200C9A66}</ProjectGuid>
+      <RootNamespace>lzma</RootNamespace>
+      <Keyword>Win32Proj</Keyword>
++     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    </PropertyGroup>
+    <Import Project="python.props" />
+    <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+***************
+*** 45,50 ****
+--- 46,75 ----
+      <ConfigurationType>DynamicLibrary</ConfigurationType>
+      <CharacterSet>NotSet</CharacterSet>
+    </PropertyGroup>
++   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
++     <PlatformToolset>v142</PlatformToolset>
++   </PropertyGroup>
++   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
++     <PlatformToolset>v142</PlatformToolset>
++   </PropertyGroup>
++   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
++     <PlatformToolset>v142</PlatformToolset>
++   </PropertyGroup>
++   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
++     <PlatformToolset>v142</PlatformToolset>
++   </PropertyGroup>
++   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='PGUpdate|x64'">
++     <PlatformToolset>v142</PlatformToolset>
++   </PropertyGroup>
++   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='PGUpdate|Win32'">
++     <PlatformToolset>v142</PlatformToolset>
++   </PropertyGroup>
++   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='PGInstrument|x64'">
++     <PlatformToolset>v142</PlatformToolset>
++   </PropertyGroup>
++   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='PGInstrument|Win32'">
++     <PlatformToolset>v142</PlatformToolset>
++   </PropertyGroup>
+    <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+    <PropertyGroup>
+      <TargetExt>.pyd</TargetExt>
+***************
+*** 87,90 ****
+    <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+    <ImportGroup Label="ExtensionTargets">
+    </ImportGroup>
+! </Project>
+--- 112,115 ----
+    <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+    <ImportGroup Label="ExtensionTargets">
+    </ImportGroup>
+! </Project>
+\ No newline at end of file
+diff -crp Python-3.7.5-orig/PCbuild/_lzma.vcxproj.filters Python-3.7.5/PCbuild/_lzma.vcxproj.filters
+*** Python-3.7.5-orig/PCbuild/_lzma.vcxproj.filters	Tue Oct 15 07:32:36 2019
+--- Python-3.7.5/PCbuild/_lzma.vcxproj.filters	Sun Dec  8 05:39:22 2019
+***************
+*** 10,13 ****
+--- 10,16 ----
+        <Filter>Source Files</Filter>
+      </ClCompile>
+    </ItemGroup>
++   <ItemGroup>
++     <ResourceCompile Include="..\PC\python_nt.rc" />
++   </ItemGroup>
+  </Project>
+\ No newline at end of file
+Only in Python-3.7.5-orig/PCbuild: _lzma.vcxproj.filters.orig
+Only in Python-3.7.5-orig/PCbuild: _lzma.vcxproj.filters.rej
+Only in Python-3.7.5-orig/PCbuild: _lzma.vcxproj.orig
+Only in Python-3.7.5-orig/PCbuild: _lzma.vcxproj.rej
+diff -crp Python-3.7.5-orig/PCbuild/_msi.vcxproj Python-3.7.5/PCbuild/_msi.vcxproj
+*** Python-3.7.5-orig/PCbuild/_msi.vcxproj	Tue Oct 15 07:32:36 2019
+--- Python-3.7.5/PCbuild/_msi.vcxproj	Sun Dec  8 05:39:16 2019
+***************
+*** 38,43 ****
+--- 38,44 ----
+      <ProjectGuid>{31FFC478-7B4A-43E8-9954-8D03E2187E9C}</ProjectGuid>
+      <RootNamespace>_msi</RootNamespace>
+      <Keyword>Win32Proj</Keyword>
++     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    </PropertyGroup>
+    <Import Project="python.props" />
+    <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+***************
+*** 45,50 ****
+--- 46,75 ----
+      <ConfigurationType>DynamicLibrary</ConfigurationType>
+      <CharacterSet>NotSet</CharacterSet>
+    </PropertyGroup>
++   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
++     <PlatformToolset>v142</PlatformToolset>
++   </PropertyGroup>
++   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
++     <PlatformToolset>v142</PlatformToolset>
++   </PropertyGroup>
++   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
++     <PlatformToolset>v142</PlatformToolset>
++   </PropertyGroup>
++   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
++     <PlatformToolset>v142</PlatformToolset>
++   </PropertyGroup>
++   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='PGUpdate|x64'">
++     <PlatformToolset>v142</PlatformToolset>
++   </PropertyGroup>
++   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='PGUpdate|Win32'">
++     <PlatformToolset>v142</PlatformToolset>
++   </PropertyGroup>
++   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='PGInstrument|x64'">
++     <PlatformToolset>v142</PlatformToolset>
++   </PropertyGroup>
++   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='PGInstrument|Win32'">
++     <PlatformToolset>v142</PlatformToolset>
++   </PropertyGroup>
+    <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+    <PropertyGroup>
+      <TargetExt>.pyd</TargetExt>
+diff -crp Python-3.7.5-orig/PCbuild/_msi.vcxproj.filters Python-3.7.5/PCbuild/_msi.vcxproj.filters
+*** Python-3.7.5-orig/PCbuild/_msi.vcxproj.filters	Tue Oct 15 07:32:36 2019
+--- Python-3.7.5/PCbuild/_msi.vcxproj.filters	Sun Dec  8 05:39:16 2019
+***************
+*** 10,13 ****
+--- 10,16 ----
+        <Filter>Source Files</Filter>
+      </ClCompile>
+    </ItemGroup>
++   <ItemGroup>
++     <ResourceCompile Include="..\PC\python_nt.rc" />
++   </ItemGroup>
+  </Project>
+\ No newline at end of file
+Only in Python-3.7.5-orig/PCbuild: _msi.vcxproj.filters.orig
+Only in Python-3.7.5-orig/PCbuild: _msi.vcxproj.filters.rej
+Only in Python-3.7.5-orig/PCbuild: _msi.vcxproj.orig
+Only in Python-3.7.5-orig/PCbuild: _msi.vcxproj.rej
+diff -crp Python-3.7.5-orig/PCbuild/_multiprocessing.vcxproj Python-3.7.5/PCbuild/_multiprocessing.vcxproj
+*** Python-3.7.5-orig/PCbuild/_multiprocessing.vcxproj	Tue Oct 15 07:32:36 2019
+--- Python-3.7.5/PCbuild/_multiprocessing.vcxproj	Sun Dec  8 05:39:27 2019
+***************
+*** 38,43 ****
+--- 38,44 ----
+      <ProjectGuid>{9E48B300-37D1-11DD-8C41-005056C00008}</ProjectGuid>
+      <RootNamespace>_multiprocessing</RootNamespace>
+      <Keyword>Win32Proj</Keyword>
++     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    </PropertyGroup>
+    <Import Project="python.props" />
+    <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+***************
+*** 45,50 ****
+--- 46,75 ----
+      <ConfigurationType>DynamicLibrary</ConfigurationType>
+      <CharacterSet>NotSet</CharacterSet>
+    </PropertyGroup>
++   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
++     <PlatformToolset>v142</PlatformToolset>
++   </PropertyGroup>
++   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
++     <PlatformToolset>v142</PlatformToolset>
++   </PropertyGroup>
++   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
++     <PlatformToolset>v142</PlatformToolset>
++   </PropertyGroup>
++   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
++     <PlatformToolset>v142</PlatformToolset>
++   </PropertyGroup>
++   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='PGUpdate|x64'">
++     <PlatformToolset>v142</PlatformToolset>
++   </PropertyGroup>
++   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='PGUpdate|Win32'">
++     <PlatformToolset>v142</PlatformToolset>
++   </PropertyGroup>
++   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='PGInstrument|x64'">
++     <PlatformToolset>v142</PlatformToolset>
++   </PropertyGroup>
++   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='PGInstrument|Win32'">
++     <PlatformToolset>v142</PlatformToolset>
++   </PropertyGroup>
+    <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+    <PropertyGroup>
+      <TargetExt>.pyd</TargetExt>
+diff -crp Python-3.7.5-orig/PCbuild/_multiprocessing.vcxproj.filters Python-3.7.5/PCbuild/_multiprocessing.vcxproj.filters
+*** Python-3.7.5-orig/PCbuild/_multiprocessing.vcxproj.filters	Tue Oct 15 07:32:36 2019
+--- Python-3.7.5/PCbuild/_multiprocessing.vcxproj.filters	Sun Dec  8 05:39:27 2019
+***************
+*** 21,24 ****
+--- 21,27 ----
+        <Filter>Source Files</Filter>
+      </ClCompile>
+    </ItemGroup>
++   <ItemGroup>
++     <ResourceCompile Include="..\PC\python_nt.rc" />
++   </ItemGroup>
+  </Project>
+\ No newline at end of file
+Only in Python-3.7.5-orig/PCbuild: _multiprocessing.vcxproj.filters.orig
+Only in Python-3.7.5-orig/PCbuild: _multiprocessing.vcxproj.filters.rej
+Only in Python-3.7.5-orig/PCbuild: _multiprocessing.vcxproj.orig
+Only in Python-3.7.5-orig/PCbuild: _multiprocessing.vcxproj.rej
+diff -crp Python-3.7.5-orig/PCbuild/_overlapped.vcxproj Python-3.7.5/PCbuild/_overlapped.vcxproj
+*** Python-3.7.5-orig/PCbuild/_overlapped.vcxproj	Tue Oct 15 07:32:36 2019
+--- Python-3.7.5/PCbuild/_overlapped.vcxproj	Sun Dec  8 05:39:32 2019
+***************
+*** 38,43 ****
+--- 38,44 ----
+      <ProjectGuid>{EB6E69DD-04BF-4543-9B92-49FAABCEAC2E}</ProjectGuid>
+      <RootNamespace>_overlapped</RootNamespace>
+      <Keyword>Win32Proj</Keyword>
++     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    </PropertyGroup>
+    <Import Project="python.props" />
+    <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+***************
+*** 45,50 ****
+--- 46,75 ----
+      <ConfigurationType>DynamicLibrary</ConfigurationType>
+      <CharacterSet>NotSet</CharacterSet>
+    </PropertyGroup>
++   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
++     <PlatformToolset>v142</PlatformToolset>
++   </PropertyGroup>
++   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
++     <PlatformToolset>v142</PlatformToolset>
++   </PropertyGroup>
++   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
++     <PlatformToolset>v142</PlatformToolset>
++   </PropertyGroup>
++   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
++     <PlatformToolset>v142</PlatformToolset>
++   </PropertyGroup>
++   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='PGUpdate|x64'">
++     <PlatformToolset>v142</PlatformToolset>
++   </PropertyGroup>
++   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='PGUpdate|Win32'">
++     <PlatformToolset>v142</PlatformToolset>
++   </PropertyGroup>
++   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='PGInstrument|x64'">
++     <PlatformToolset>v142</PlatformToolset>
++   </PropertyGroup>
++   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='PGInstrument|Win32'">
++     <PlatformToolset>v142</PlatformToolset>
++   </PropertyGroup>
+    <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+    <PropertyGroup>
+      <TargetExt>.pyd</TargetExt>
+diff -crp Python-3.7.5-orig/PCbuild/_overlapped.vcxproj.filters Python-3.7.5/PCbuild/_overlapped.vcxproj.filters
+*** Python-3.7.5-orig/PCbuild/_overlapped.vcxproj.filters	Tue Oct 15 07:32:36 2019
+--- Python-3.7.5/PCbuild/_overlapped.vcxproj.filters	Sun Dec  8 05:39:32 2019
+***************
+*** 10,13 ****
+--- 10,16 ----
+        <Filter>Source Files</Filter>
+      </ClCompile>
+    </ItemGroup>
++   <ItemGroup>
++     <ResourceCompile Include="..\PC\python_nt.rc" />
++   </ItemGroup>
+  </Project>
+\ No newline at end of file
+Only in Python-3.7.5-orig/PCbuild: _overlapped.vcxproj.filters.orig
+Only in Python-3.7.5-orig/PCbuild: _overlapped.vcxproj.filters.rej
+Only in Python-3.7.5-orig/PCbuild: _overlapped.vcxproj.orig
+Only in Python-3.7.5-orig/PCbuild: _overlapped.vcxproj.rej
+diff -crp Python-3.7.5-orig/PCbuild/_queue.vcxproj Python-3.7.5/PCbuild/_queue.vcxproj
+*** Python-3.7.5-orig/PCbuild/_queue.vcxproj	Tue Oct 15 07:32:36 2019
+--- Python-3.7.5/PCbuild/_queue.vcxproj	Sun Dec  8 05:39:36 2019
+***************
+*** 38,43 ****
+--- 38,44 ----
+      <ProjectGuid>{78D80A15-BD8C-44E2-B49E-1F05B0A0A687}</ProjectGuid>
+      <RootNamespace>_queue</RootNamespace>
+      <Keyword>Win32Proj</Keyword>
++     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    </PropertyGroup>
+    <Import Project="python.props" />
+    <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+***************
+*** 45,50 ****
+--- 46,75 ----
+      <ConfigurationType>DynamicLibrary</ConfigurationType>
+      <CharacterSet>NotSet</CharacterSet>
+    </PropertyGroup>
++   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
++     <PlatformToolset>v142</PlatformToolset>
++   </PropertyGroup>
++   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
++     <PlatformToolset>v142</PlatformToolset>
++   </PropertyGroup>
++   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
++     <PlatformToolset>v142</PlatformToolset>
++   </PropertyGroup>
++   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
++     <PlatformToolset>v142</PlatformToolset>
++   </PropertyGroup>
++   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='PGUpdate|x64'">
++     <PlatformToolset>v142</PlatformToolset>
++   </PropertyGroup>
++   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='PGUpdate|Win32'">
++     <PlatformToolset>v142</PlatformToolset>
++   </PropertyGroup>
++   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='PGInstrument|x64'">
++     <PlatformToolset>v142</PlatformToolset>
++   </PropertyGroup>
++   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='PGInstrument|Win32'">
++     <PlatformToolset>v142</PlatformToolset>
++   </PropertyGroup>
+    <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+    <PropertyGroup>
+      <TargetExt>.pyd</TargetExt>
+***************
+*** 74,77 ****
+    <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+    <ImportGroup Label="ExtensionTargets">
+    </ImportGroup>
+! </Project>
+--- 99,102 ----
+    <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+    <ImportGroup Label="ExtensionTargets">
+    </ImportGroup>
+! </Project>
+\ No newline at end of file
+Only in Python-3.7.5-orig/PCbuild: _queue.vcxproj.orig
+Only in Python-3.7.5-orig/PCbuild: _queue.vcxproj.rej
+diff -crp Python-3.7.5-orig/PCbuild/_socket.vcxproj Python-3.7.5/PCbuild/_socket.vcxproj
+*** Python-3.7.5-orig/PCbuild/_socket.vcxproj	Tue Oct 15 07:32:36 2019
+--- Python-3.7.5/PCbuild/_socket.vcxproj	Sun Dec  8 05:39:16 2019
+***************
+*** 38,43 ****
+--- 38,44 ----
+      <ProjectGuid>{86937F53-C189-40EF-8CE8-8759D8E7D480}</ProjectGuid>
+      <RootNamespace>_socket</RootNamespace>
+      <Keyword>Win32Proj</Keyword>
++     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    </PropertyGroup>
+    <Import Project="python.props" />
+    <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+***************
+*** 45,50 ****
+--- 46,75 ----
+      <ConfigurationType>DynamicLibrary</ConfigurationType>
+      <CharacterSet>NotSet</CharacterSet>
+    </PropertyGroup>
++   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
++     <PlatformToolset>v142</PlatformToolset>
++   </PropertyGroup>
++   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
++     <PlatformToolset>v142</PlatformToolset>
++   </PropertyGroup>
++   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
++     <PlatformToolset>v142</PlatformToolset>
++   </PropertyGroup>
++   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
++     <PlatformToolset>v142</PlatformToolset>
++   </PropertyGroup>
++   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='PGUpdate|x64'">
++     <PlatformToolset>v142</PlatformToolset>
++   </PropertyGroup>
++   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='PGUpdate|Win32'">
++     <PlatformToolset>v142</PlatformToolset>
++   </PropertyGroup>
++   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='PGInstrument|x64'">
++     <PlatformToolset>v142</PlatformToolset>
++   </PropertyGroup>
++   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='PGInstrument|Win32'">
++     <PlatformToolset>v142</PlatformToolset>
++   </PropertyGroup>
+    <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+    <PropertyGroup>
+      <TargetExt>.pyd</TargetExt>
+diff -crp Python-3.7.5-orig/PCbuild/_socket.vcxproj.filters Python-3.7.5/PCbuild/_socket.vcxproj.filters
+*** Python-3.7.5-orig/PCbuild/_socket.vcxproj.filters	Tue Oct 15 07:32:36 2019
+--- Python-3.7.5/PCbuild/_socket.vcxproj.filters	Sun Dec  8 05:39:16 2019
+***************
+*** 18,21 ****
+--- 18,24 ----
+        <Filter>Source Files</Filter>
+      </ClCompile>
+    </ItemGroup>
++   <ItemGroup>
++     <ResourceCompile Include="..\PC\python_nt.rc" />
++   </ItemGroup>
+  </Project>
+\ No newline at end of file
+Only in Python-3.7.5-orig/PCbuild: _socket.vcxproj.filters.orig
+Only in Python-3.7.5-orig/PCbuild: _socket.vcxproj.filters.rej
+Only in Python-3.7.5-orig/PCbuild: _socket.vcxproj.orig
+Only in Python-3.7.5-orig/PCbuild: _socket.vcxproj.rej
+diff -crp Python-3.7.5-orig/PCbuild/_sqlite3.vcxproj Python-3.7.5/PCbuild/_sqlite3.vcxproj
+*** Python-3.7.5-orig/PCbuild/_sqlite3.vcxproj	Tue Oct 15 07:32:36 2019
+--- Python-3.7.5/PCbuild/_sqlite3.vcxproj	Sun Dec  8 05:39:17 2019
+***************
+*** 38,43 ****
+--- 38,44 ----
+      <ProjectGuid>{13CECB97-4119-4316-9D42-8534019A5A44}</ProjectGuid>
+      <RootNamespace>_sqlite3</RootNamespace>
+      <Keyword>Win32Proj</Keyword>
++     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    </PropertyGroup>
+    <Import Project="python.props" />
+    <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+***************
+*** 45,50 ****
+--- 46,75 ----
+      <ConfigurationType>DynamicLibrary</ConfigurationType>
+      <CharacterSet>NotSet</CharacterSet>
+    </PropertyGroup>
++   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
++     <PlatformToolset>v142</PlatformToolset>
++   </PropertyGroup>
++   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
++     <PlatformToolset>v142</PlatformToolset>
++   </PropertyGroup>
++   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
++     <PlatformToolset>v142</PlatformToolset>
++   </PropertyGroup>
++   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
++     <PlatformToolset>v142</PlatformToolset>
++   </PropertyGroup>
++   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='PGUpdate|x64'">
++     <PlatformToolset>v142</PlatformToolset>
++   </PropertyGroup>
++   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='PGUpdate|Win32'">
++     <PlatformToolset>v142</PlatformToolset>
++   </PropertyGroup>
++   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='PGInstrument|x64'">
++     <PlatformToolset>v142</PlatformToolset>
++   </PropertyGroup>
++   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='PGInstrument|Win32'">
++     <PlatformToolset>v142</PlatformToolset>
++   </PropertyGroup>
+    <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+    <PropertyGroup>
+      <TargetExt>.pyd</TargetExt>
+diff -crp Python-3.7.5-orig/PCbuild/_sqlite3.vcxproj.filters Python-3.7.5/PCbuild/_sqlite3.vcxproj.filters
+*** Python-3.7.5-orig/PCbuild/_sqlite3.vcxproj.filters	Tue Oct 15 07:32:36 2019
+--- Python-3.7.5/PCbuild/_sqlite3.vcxproj.filters	Sun Dec  8 05:39:17 2019
+***************
+*** 66,69 ****
+--- 66,72 ----
+        <Filter>Source Files</Filter>
+      </ClCompile>
+    </ItemGroup>
++   <ItemGroup>
++     <ResourceCompile Include="..\PC\python_nt.rc" />
++   </ItemGroup>
+  </Project>
+\ No newline at end of file
+Only in Python-3.7.5-orig/PCbuild: _sqlite3.vcxproj.filters.orig
+Only in Python-3.7.5-orig/PCbuild: _sqlite3.vcxproj.filters.rej
+Only in Python-3.7.5-orig/PCbuild: _sqlite3.vcxproj.orig
+Only in Python-3.7.5-orig/PCbuild: _sqlite3.vcxproj.rej
+diff -crp Python-3.7.5-orig/PCbuild/_ssl.vcxproj Python-3.7.5/PCbuild/_ssl.vcxproj
+*** Python-3.7.5-orig/PCbuild/_ssl.vcxproj	Tue Oct 15 07:32:36 2019
+--- Python-3.7.5/PCbuild/_ssl.vcxproj	Sun Dec  8 05:39:18 2019
+***************
+*** 38,43 ****
+--- 38,44 ----
+      <ProjectGuid>{C6E20F84-3247-4AD6-B051-B073268F73BA}</ProjectGuid>
+      <RootNamespace>_ssl</RootNamespace>
+      <Keyword>Win32Proj</Keyword>
++     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    </PropertyGroup>
+    <Import Project="python.props" />
+    <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+***************
+*** 45,50 ****
+--- 46,75 ----
+      <ConfigurationType>DynamicLibrary</ConfigurationType>
+      <CharacterSet>NotSet</CharacterSet>
+    </PropertyGroup>
++   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
++     <PlatformToolset>v142</PlatformToolset>
++   </PropertyGroup>
++   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
++     <PlatformToolset>v142</PlatformToolset>
++   </PropertyGroup>
++   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
++     <PlatformToolset>v142</PlatformToolset>
++   </PropertyGroup>
++   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
++     <PlatformToolset>v142</PlatformToolset>
++   </PropertyGroup>
++   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='PGUpdate|x64'">
++     <PlatformToolset>v142</PlatformToolset>
++   </PropertyGroup>
++   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='PGUpdate|Win32'">
++     <PlatformToolset>v142</PlatformToolset>
++   </PropertyGroup>
++   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='PGInstrument|x64'">
++     <PlatformToolset>v142</PlatformToolset>
++   </PropertyGroup>
++   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='PGInstrument|Win32'">
++     <PlatformToolset>v142</PlatformToolset>
++   </PropertyGroup>
+    <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+    <PropertyGroup>
+      <TargetExt>.pyd</TargetExt>
+Only in Python-3.7.5-orig/PCbuild: _ssl.vcxproj.orig
+Only in Python-3.7.5-orig/PCbuild: _ssl.vcxproj.rej
+diff -crp Python-3.7.5-orig/PCbuild/_testbuffer.vcxproj Python-3.7.5/PCbuild/_testbuffer.vcxproj
+*** Python-3.7.5-orig/PCbuild/_testbuffer.vcxproj	Tue Oct 15 07:32:36 2019
+--- Python-3.7.5/PCbuild/_testbuffer.vcxproj	Sun Dec  8 05:39:29 2019
+***************
+*** 39,44 ****
+--- 39,45 ----
+      <RootNamespace>_testbuffer</RootNamespace>
+      <Keyword>Win32Proj</Keyword>
+      <SupportPGO>false</SupportPGO>
++     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    </PropertyGroup>
+    <Import Project="python.props" />
+    <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+***************
+*** 46,51 ****
+--- 47,76 ----
+      <ConfigurationType>DynamicLibrary</ConfigurationType>
+      <CharacterSet>NotSet</CharacterSet>
+    </PropertyGroup>
++   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
++     <PlatformToolset>v142</PlatformToolset>
++   </PropertyGroup>
++   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
++     <PlatformToolset>v142</PlatformToolset>
++   </PropertyGroup>
++   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
++     <PlatformToolset>v142</PlatformToolset>
++   </PropertyGroup>
++   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
++     <PlatformToolset>v142</PlatformToolset>
++   </PropertyGroup>
++   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='PGUpdate|x64'">
++     <PlatformToolset>v142</PlatformToolset>
++   </PropertyGroup>
++   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='PGUpdate|Win32'">
++     <PlatformToolset>v142</PlatformToolset>
++   </PropertyGroup>
++   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='PGInstrument|x64'">
++     <PlatformToolset>v142</PlatformToolset>
++   </PropertyGroup>
++   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='PGInstrument|Win32'">
++     <PlatformToolset>v142</PlatformToolset>
++   </PropertyGroup>
+    <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+    <PropertyGroup>
+      <TargetExt>.pyd</TargetExt>
+diff -crp Python-3.7.5-orig/PCbuild/_testbuffer.vcxproj.filters Python-3.7.5/PCbuild/_testbuffer.vcxproj.filters
+*** Python-3.7.5-orig/PCbuild/_testbuffer.vcxproj.filters	Tue Oct 15 07:32:36 2019
+--- Python-3.7.5/PCbuild/_testbuffer.vcxproj.filters	Sun Dec  8 05:39:29 2019
+***************
+*** 10,13 ****
+--- 10,16 ----
+        <Filter>Source Files</Filter>
+      </ClCompile>
+    </ItemGroup>
++   <ItemGroup>
++     <ResourceCompile Include="..\PC\python_nt.rc" />
++   </ItemGroup>
+  </Project>
+\ No newline at end of file
+Only in Python-3.7.5-orig/PCbuild: _testbuffer.vcxproj.filters.orig
+Only in Python-3.7.5-orig/PCbuild: _testbuffer.vcxproj.filters.rej
+Only in Python-3.7.5-orig/PCbuild: _testbuffer.vcxproj.orig
+Only in Python-3.7.5-orig/PCbuild: _testbuffer.vcxproj.rej
+diff -crp Python-3.7.5-orig/PCbuild/_testcapi.vcxproj Python-3.7.5/PCbuild/_testcapi.vcxproj
+*** Python-3.7.5-orig/PCbuild/_testcapi.vcxproj	Tue Oct 15 07:32:36 2019
+--- Python-3.7.5/PCbuild/_testcapi.vcxproj	Sun Dec  8 05:39:19 2019
+***************
+*** 39,44 ****
+--- 39,45 ----
+      <RootNamespace>_testcapi</RootNamespace>
+      <Keyword>Win32Proj</Keyword>
+      <SupportPGO>false</SupportPGO>
++     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    </PropertyGroup>
+    <Import Project="python.props" />
+    <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+***************
+*** 46,51 ****
+--- 47,76 ----
+      <ConfigurationType>DynamicLibrary</ConfigurationType>
+      <CharacterSet>NotSet</CharacterSet>
+    </PropertyGroup>
++   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
++     <PlatformToolset>v142</PlatformToolset>
++   </PropertyGroup>
++   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
++     <PlatformToolset>v142</PlatformToolset>
++   </PropertyGroup>
++   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
++     <PlatformToolset>v142</PlatformToolset>
++   </PropertyGroup>
++   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
++     <PlatformToolset>v142</PlatformToolset>
++   </PropertyGroup>
++   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='PGUpdate|x64'">
++     <PlatformToolset>v142</PlatformToolset>
++   </PropertyGroup>
++   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='PGUpdate|Win32'">
++     <PlatformToolset>v142</PlatformToolset>
++   </PropertyGroup>
++   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='PGInstrument|x64'">
++     <PlatformToolset>v142</PlatformToolset>
++   </PropertyGroup>
++   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='PGInstrument|Win32'">
++     <PlatformToolset>v142</PlatformToolset>
++   </PropertyGroup>
+    <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+    <PropertyGroup>
+      <TargetExt>.pyd</TargetExt>
+diff -crp Python-3.7.5-orig/PCbuild/_testcapi.vcxproj.filters Python-3.7.5/PCbuild/_testcapi.vcxproj.filters
+*** Python-3.7.5-orig/PCbuild/_testcapi.vcxproj.filters	Tue Oct 15 07:32:36 2019
+--- Python-3.7.5/PCbuild/_testcapi.vcxproj.filters	Sun Dec  8 05:39:19 2019
+***************
+*** 10,13 ****
+--- 10,16 ----
+        <Filter>Source Files</Filter>
+      </ClCompile>
+    </ItemGroup>
++   <ItemGroup>
++     <ResourceCompile Include="..\PC\python_nt.rc" />
++   </ItemGroup>
+  </Project>
+\ No newline at end of file
+Only in Python-3.7.5-orig/PCbuild: _testcapi.vcxproj.filters.orig
+Only in Python-3.7.5-orig/PCbuild: _testcapi.vcxproj.filters.rej
+Only in Python-3.7.5-orig/PCbuild: _testcapi.vcxproj.orig
+Only in Python-3.7.5-orig/PCbuild: _testcapi.vcxproj.rej
+diff -crp Python-3.7.5-orig/PCbuild/_testconsole.vcxproj Python-3.7.5/PCbuild/_testconsole.vcxproj
+*** Python-3.7.5-orig/PCbuild/_testconsole.vcxproj	Tue Oct 15 07:32:36 2019
+--- Python-3.7.5/PCbuild/_testconsole.vcxproj	Sun Dec  8 05:39:35 2019
+***************
+*** 39,44 ****
+--- 39,45 ----
+      <Keyword>Win32Proj</Keyword>
+      <RootNamespace>_testconsole</RootNamespace>
+      <SupportPGO>false</SupportPGO>
++     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    </PropertyGroup>
+    <Import Project="python.props" />
+    <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+***************
+*** 46,51 ****
+--- 47,76 ----
+      <ConfigurationType>DynamicLibrary</ConfigurationType>
+      <CharacterSet>NotSet</CharacterSet>
+    </PropertyGroup>
++   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
++     <PlatformToolset>v142</PlatformToolset>
++   </PropertyGroup>
++   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
++     <PlatformToolset>v142</PlatformToolset>
++   </PropertyGroup>
++   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
++     <PlatformToolset>v142</PlatformToolset>
++   </PropertyGroup>
++   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
++     <PlatformToolset>v142</PlatformToolset>
++   </PropertyGroup>
++   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='PGUpdate|x64'">
++     <PlatformToolset>v142</PlatformToolset>
++   </PropertyGroup>
++   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='PGUpdate|Win32'">
++     <PlatformToolset>v142</PlatformToolset>
++   </PropertyGroup>
++   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='PGInstrument|x64'">
++     <PlatformToolset>v142</PlatformToolset>
++   </PropertyGroup>
++   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='PGInstrument|Win32'">
++     <PlatformToolset>v142</PlatformToolset>
++   </PropertyGroup>
+    <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+    <PropertyGroup>
+      <TargetExt>.pyd</TargetExt>
+diff -crp Python-3.7.5-orig/PCbuild/_testconsole.vcxproj.filters Python-3.7.5/PCbuild/_testconsole.vcxproj.filters
+*** Python-3.7.5-orig/PCbuild/_testconsole.vcxproj.filters	Tue Oct 15 07:32:36 2019
+--- Python-3.7.5/PCbuild/_testconsole.vcxproj.filters	Sun Dec  8 05:39:35 2019
+***************
+*** 15,22 ****
+      </Filter>
+    </ItemGroup>
+    <ItemGroup>
+!     <ClCompile Include="..\Modules\_testmultiphase.c">
+        <Filter>Source Files</Filter>
+      </ClCompile>
+    </ItemGroup>
+  </Project>
+\ No newline at end of file
+--- 15,27 ----
+      </Filter>
+    </ItemGroup>
+    <ItemGroup>
+!     <ClCompile Include="..\PC\_testconsole.c">
+        <Filter>Source Files</Filter>
+      </ClCompile>
+    </ItemGroup>
++   <ItemGroup>
++     <ResourceCompile Include="..\PC\python_nt.rc">
++       <Filter>Resource Files</Filter>
++     </ResourceCompile>
++   </ItemGroup>
+  </Project>
+\ No newline at end of file
+Only in Python-3.7.5-orig/PCbuild: _testconsole.vcxproj.filters.orig
+Only in Python-3.7.5-orig/PCbuild: _testconsole.vcxproj.filters.rej
+Only in Python-3.7.5-orig/PCbuild: _testconsole.vcxproj.orig
+Only in Python-3.7.5-orig/PCbuild: _testconsole.vcxproj.rej
+diff -crp Python-3.7.5-orig/PCbuild/_testembed.vcxproj Python-3.7.5/PCbuild/_testembed.vcxproj
+*** Python-3.7.5-orig/PCbuild/_testembed.vcxproj	Tue Oct 15 07:32:36 2019
+--- Python-3.7.5/PCbuild/_testembed.vcxproj	Sun Dec  8 05:39:33 2019
+***************
+*** 39,44 ****
+--- 39,45 ----
+      <Keyword>Win32Proj</Keyword>
+      <RootNamespace>_testembed</RootNamespace>
+      <SupportPGO>false</SupportPGO>
++     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    </PropertyGroup>
+    <Import Project="python.props" />
+    <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+***************
+*** 46,51 ****
+--- 47,76 ----
+      <ConfigurationType>Application</ConfigurationType>
+      <CharacterSet>Unicode</CharacterSet>
+    </PropertyGroup>
++   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
++     <PlatformToolset>v142</PlatformToolset>
++   </PropertyGroup>
++   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
++     <PlatformToolset>v142</PlatformToolset>
++   </PropertyGroup>
++   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
++     <PlatformToolset>v142</PlatformToolset>
++   </PropertyGroup>
++   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
++     <PlatformToolset>v142</PlatformToolset>
++   </PropertyGroup>
++   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='PGUpdate|x64'">
++     <PlatformToolset>v142</PlatformToolset>
++   </PropertyGroup>
++   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='PGUpdate|Win32'">
++     <PlatformToolset>v142</PlatformToolset>
++   </PropertyGroup>
++   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='PGInstrument|x64'">
++     <PlatformToolset>v142</PlatformToolset>
++   </PropertyGroup>
++   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='PGInstrument|Win32'">
++     <PlatformToolset>v142</PlatformToolset>
++   </PropertyGroup>
+    <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+    <ImportGroup Label="ExtensionSettings">
+    </ImportGroup>
+diff -crp Python-3.7.5-orig/PCbuild/_testembed.vcxproj.filters Python-3.7.5/PCbuild/_testembed.vcxproj.filters
+*** Python-3.7.5-orig/PCbuild/_testembed.vcxproj.filters	Tue Oct 15 07:32:36 2019
+--- Python-3.7.5/PCbuild/_testembed.vcxproj.filters	Sun Dec  8 05:39:33 2019
+***************
+*** 19,22 ****
+--- 19,27 ----
+        <Filter>Source Files</Filter>
+      </ClCompile>
+    </ItemGroup>
++   <ItemGroup>
++     <ResourceCompile Include="..\PC\python_nt.rc">
++       <Filter>Resource Files</Filter>
++     </ResourceCompile>
++   </ItemGroup>
+  </Project>
+\ No newline at end of file
+Only in Python-3.7.5-orig/PCbuild: _testembed.vcxproj.filters.orig
+Only in Python-3.7.5-orig/PCbuild: _testembed.vcxproj.filters.rej
+Only in Python-3.7.5-orig/PCbuild: _testembed.vcxproj.orig
+Only in Python-3.7.5-orig/PCbuild: _testembed.vcxproj.rej
+diff -crp Python-3.7.5-orig/PCbuild/_testimportmultiple.vcxproj Python-3.7.5/PCbuild/_testimportmultiple.vcxproj
+*** Python-3.7.5-orig/PCbuild/_testimportmultiple.vcxproj	Tue Oct 15 07:32:36 2019
+--- Python-3.7.5/PCbuild/_testimportmultiple.vcxproj	Sun Dec  8 05:39:19 2019
+***************
+*** 39,44 ****
+--- 39,45 ----
+      <RootNamespace>_testimportmultiple</RootNamespace>
+      <Keyword>Win32Proj</Keyword>
+      <SupportPGO>false</SupportPGO>
++     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    </PropertyGroup>
+    <Import Project="python.props" />
+    <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+***************
+*** 46,51 ****
+--- 47,76 ----
+      <ConfigurationType>DynamicLibrary</ConfigurationType>
+      <CharacterSet>NotSet</CharacterSet>
+    </PropertyGroup>
++   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
++     <PlatformToolset>v142</PlatformToolset>
++   </PropertyGroup>
++   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
++     <PlatformToolset>v142</PlatformToolset>
++   </PropertyGroup>
++   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
++     <PlatformToolset>v142</PlatformToolset>
++   </PropertyGroup>
++   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
++     <PlatformToolset>v142</PlatformToolset>
++   </PropertyGroup>
++   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='PGUpdate|x64'">
++     <PlatformToolset>v142</PlatformToolset>
++   </PropertyGroup>
++   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='PGUpdate|Win32'">
++     <PlatformToolset>v142</PlatformToolset>
++   </PropertyGroup>
++   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='PGInstrument|x64'">
++     <PlatformToolset>v142</PlatformToolset>
++   </PropertyGroup>
++   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='PGInstrument|Win32'">
++     <PlatformToolset>v142</PlatformToolset>
++   </PropertyGroup>
+    <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+    <PropertyGroup>
+      <TargetExt>.pyd</TargetExt>
+***************
+*** 75,78 ****
+    <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+    <ImportGroup Label="ExtensionTargets">
+    </ImportGroup>
+! </Project>
+--- 100,103 ----
+    <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+    <ImportGroup Label="ExtensionTargets">
+    </ImportGroup>
+! </Project>
+\ No newline at end of file
+diff -crp Python-3.7.5-orig/PCbuild/_testimportmultiple.vcxproj.filters Python-3.7.5/PCbuild/_testimportmultiple.vcxproj.filters
+*** Python-3.7.5-orig/PCbuild/_testimportmultiple.vcxproj.filters	Tue Oct 15 07:32:36 2019
+--- Python-3.7.5/PCbuild/_testimportmultiple.vcxproj.filters	Sun Dec  8 05:39:19 2019
+***************
+*** 10,13 ****
+        <Filter>Source Files</Filter>
+      </ClCompile>
+    </ItemGroup>
+! </Project>
+--- 10,16 ----
+        <Filter>Source Files</Filter>
+      </ClCompile>
+    </ItemGroup>
+!   <ItemGroup>
+!     <ResourceCompile Include="..\PC\python_nt.rc" />
+!   </ItemGroup>
+! </Project>
+\ No newline at end of file
+Only in Python-3.7.5-orig/PCbuild: _testimportmultiple.vcxproj.filters.orig
+Only in Python-3.7.5-orig/PCbuild: _testimportmultiple.vcxproj.filters.rej
+Only in Python-3.7.5-orig/PCbuild: _testimportmultiple.vcxproj.orig
+Only in Python-3.7.5-orig/PCbuild: _testimportmultiple.vcxproj.rej
+diff -crp Python-3.7.5-orig/PCbuild/_testmultiphase.vcxproj Python-3.7.5/PCbuild/_testmultiphase.vcxproj
+*** Python-3.7.5-orig/PCbuild/_testmultiphase.vcxproj	Tue Oct 15 07:32:36 2019
+--- Python-3.7.5/PCbuild/_testmultiphase.vcxproj	Sun Dec  8 05:39:33 2019
+***************
+*** 39,44 ****
+--- 39,45 ----
+      <Keyword>Win32Proj</Keyword>
+      <RootNamespace>_testmultiphase</RootNamespace>
+      <SupportPGO>false</SupportPGO>
++     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    </PropertyGroup>
+    <Import Project="python.props" />
+    <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+***************
+*** 46,51 ****
+--- 47,76 ----
+      <ConfigurationType>DynamicLibrary</ConfigurationType>
+      <CharacterSet>NotSet</CharacterSet>
+    </PropertyGroup>
++   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
++     <PlatformToolset>v142</PlatformToolset>
++   </PropertyGroup>
++   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
++     <PlatformToolset>v142</PlatformToolset>
++   </PropertyGroup>
++   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
++     <PlatformToolset>v142</PlatformToolset>
++   </PropertyGroup>
++   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
++     <PlatformToolset>v142</PlatformToolset>
++   </PropertyGroup>
++   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='PGUpdate|x64'">
++     <PlatformToolset>v142</PlatformToolset>
++   </PropertyGroup>
++   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='PGUpdate|Win32'">
++     <PlatformToolset>v142</PlatformToolset>
++   </PropertyGroup>
++   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='PGInstrument|x64'">
++     <PlatformToolset>v142</PlatformToolset>
++   </PropertyGroup>
++   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='PGInstrument|Win32'">
++     <PlatformToolset>v142</PlatformToolset>
++   </PropertyGroup>
+    <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+    <PropertyGroup>
+      <TargetExt>.pyd</TargetExt>
+diff -crp Python-3.7.5-orig/PCbuild/_testmultiphase.vcxproj.filters Python-3.7.5/PCbuild/_testmultiphase.vcxproj.filters
+*** Python-3.7.5-orig/PCbuild/_testmultiphase.vcxproj.filters	Tue Oct 15 07:32:36 2019
+--- Python-3.7.5/PCbuild/_testmultiphase.vcxproj.filters	Sun Dec  8 05:39:33 2019
+***************
+*** 19,22 ****
+--- 19,27 ----
+        <Filter>Source Files</Filter>
+      </ClCompile>
+    </ItemGroup>
++   <ItemGroup>
++     <ResourceCompile Include="..\PC\python_nt.rc">
++       <Filter>Resource Files</Filter>
++     </ResourceCompile>
++   </ItemGroup>
+  </Project>
+\ No newline at end of file
+Only in Python-3.7.5-orig/PCbuild: _testmultiphase.vcxproj.filters.orig
+Only in Python-3.7.5-orig/PCbuild: _testmultiphase.vcxproj.filters.rej
+Only in Python-3.7.5-orig/PCbuild: _testmultiphase.vcxproj.orig
+Only in Python-3.7.5-orig/PCbuild: _testmultiphase.vcxproj.rej
+diff -crp Python-3.7.5-orig/PCbuild/_tkinter.vcxproj Python-3.7.5/PCbuild/_tkinter.vcxproj
+*** Python-3.7.5-orig/PCbuild/_tkinter.vcxproj	Tue Oct 15 07:32:36 2019
+--- Python-3.7.5/PCbuild/_tkinter.vcxproj	Sun Dec  8 05:39:20 2019
+***************
+*** 38,43 ****
+--- 38,44 ----
+      <ProjectGuid>{4946ECAC-2E69-4BF8-A90A-F5136F5094DF}</ProjectGuid>
+      <RootNamespace>_tkinter</RootNamespace>
+      <Keyword>Win32Proj</Keyword>
++     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    </PropertyGroup>
+    <Import Project="python.props" />
+    <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+***************
+*** 45,50 ****
+--- 46,75 ----
+      <ConfigurationType>DynamicLibrary</ConfigurationType>
+      <CharacterSet>NotSet</CharacterSet>
+    </PropertyGroup>
++   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
++     <PlatformToolset>v142</PlatformToolset>
++   </PropertyGroup>
++   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
++     <PlatformToolset>v142</PlatformToolset>
++   </PropertyGroup>
++   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
++     <PlatformToolset>v142</PlatformToolset>
++   </PropertyGroup>
++   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
++     <PlatformToolset>v142</PlatformToolset>
++   </PropertyGroup>
++   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='PGUpdate|x64'">
++     <PlatformToolset>v142</PlatformToolset>
++   </PropertyGroup>
++   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='PGUpdate|Win32'">
++     <PlatformToolset>v142</PlatformToolset>
++   </PropertyGroup>
++   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='PGInstrument|x64'">
++     <PlatformToolset>v142</PlatformToolset>
++   </PropertyGroup>
++   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='PGInstrument|Win32'">
++     <PlatformToolset>v142</PlatformToolset>
++   </PropertyGroup>
+    <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+    <PropertyGroup>
+      <TargetExt>.pyd</TargetExt>
+diff -crp Python-3.7.5-orig/PCbuild/_tkinter.vcxproj.filters Python-3.7.5/PCbuild/_tkinter.vcxproj.filters
+*** Python-3.7.5-orig/PCbuild/_tkinter.vcxproj.filters	Tue Oct 15 07:32:36 2019
+--- Python-3.7.5/PCbuild/_tkinter.vcxproj.filters	Sun Dec  8 05:39:20 2019
+***************
+*** 13,16 ****
+--- 13,19 ----
+        <Filter>Source Files</Filter>
+      </ClCompile>
+    </ItemGroup>
++   <ItemGroup>
++     <ResourceCompile Include="..\PC\python_nt.rc" />
++   </ItemGroup>
+  </Project>
+\ No newline at end of file
+Only in Python-3.7.5-orig/PCbuild: _tkinter.vcxproj.filters.orig
+Only in Python-3.7.5-orig/PCbuild: _tkinter.vcxproj.filters.rej
+Only in Python-3.7.5-orig/PCbuild: _tkinter.vcxproj.orig
+Only in Python-3.7.5-orig/PCbuild: _tkinter.vcxproj.rej
+diff -crp Python-3.7.5-orig/PCbuild/liblzma.vcxproj Python-3.7.5/PCbuild/liblzma.vcxproj
+*** Python-3.7.5-orig/PCbuild/liblzma.vcxproj	Tue Oct 15 07:32:36 2019
+--- Python-3.7.5/PCbuild/liblzma.vcxproj	Sun Dec  8 05:39:37 2019
+***************
+*** 38,51 ****
+      <ProjectGuid>{12728250-16EC-4DC6-94D7-E21DD88947F8}</ProjectGuid>
+      <RootNamespace>liblzma</RootNamespace>
+      <SupportPGO>true</SupportPGO>
+    </PropertyGroup>
+- 
+    <Import Project="python.props" />
+    <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+- 
+    <PropertyGroup Label="Configuration">
+      <ConfigurationType>StaticLibrary</ConfigurationType>
+    </PropertyGroup>
+    <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+    <ImportGroup Label="ExtensionSettings">
+    </ImportGroup>
+--- 38,74 ----
+      <ProjectGuid>{12728250-16EC-4DC6-94D7-E21DD88947F8}</ProjectGuid>
+      <RootNamespace>liblzma</RootNamespace>
+      <SupportPGO>true</SupportPGO>
++     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    </PropertyGroup>
+    <Import Project="python.props" />
+    <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+    <PropertyGroup Label="Configuration">
+      <ConfigurationType>StaticLibrary</ConfigurationType>
+    </PropertyGroup>
++   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
++     <PlatformToolset>v142</PlatformToolset>
++   </PropertyGroup>
++   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
++     <PlatformToolset>v142</PlatformToolset>
++   </PropertyGroup>
++   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
++     <PlatformToolset>v142</PlatformToolset>
++   </PropertyGroup>
++   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
++     <PlatformToolset>v142</PlatformToolset>
++   </PropertyGroup>
++   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='PGUpdate|x64'">
++     <PlatformToolset>v142</PlatformToolset>
++   </PropertyGroup>
++   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='PGUpdate|Win32'">
++     <PlatformToolset>v142</PlatformToolset>
++   </PropertyGroup>
++   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='PGInstrument|x64'">
++     <PlatformToolset>v142</PlatformToolset>
++   </PropertyGroup>
++   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='PGInstrument|Win32'">
++     <PlatformToolset>v142</PlatformToolset>
++   </PropertyGroup>
+    <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+    <ImportGroup Label="ExtensionSettings">
+    </ImportGroup>
+***************
+*** 214,217 ****
+    <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+    <ImportGroup Label="ExtensionTargets">
+    </ImportGroup>
+! </Project>
+--- 237,240 ----
+    <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+    <ImportGroup Label="ExtensionTargets">
+    </ImportGroup>
+! </Project>
+\ No newline at end of file
+Only in Python-3.7.5-orig/PCbuild: liblzma.vcxproj.orig
+Only in Python-3.7.5-orig/PCbuild: liblzma.vcxproj.rej
+diff -crp Python-3.7.5-orig/PCbuild/pyexpat.vcxproj Python-3.7.5/PCbuild/pyexpat.vcxproj
+*** Python-3.7.5-orig/PCbuild/pyexpat.vcxproj	Tue Oct 15 07:32:36 2019
+--- Python-3.7.5/PCbuild/pyexpat.vcxproj	Sun Dec  8 05:39:24 2019
+***************
+*** 38,43 ****
+--- 38,44 ----
+      <_ProjectFileVersion>10.0.30319.1</_ProjectFileVersion>
+      <ProjectGuid>{D06B6426-4762-44CC-8BAD-D79052507F2F}</ProjectGuid>
+      <RootNamespace>pyexpat</RootNamespace>
++     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    </PropertyGroup>
+    <Import Project="python.props" />
+    <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+***************
+*** 45,50 ****
+--- 46,75 ----
+      <ConfigurationType>DynamicLibrary</ConfigurationType>
+      <CharacterSet>NotSet</CharacterSet>
+    </PropertyGroup>
++   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
++     <PlatformToolset>v142</PlatformToolset>
++   </PropertyGroup>
++   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
++     <PlatformToolset>v142</PlatformToolset>
++   </PropertyGroup>
++   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
++     <PlatformToolset>v142</PlatformToolset>
++   </PropertyGroup>
++   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
++     <PlatformToolset>v142</PlatformToolset>
++   </PropertyGroup>
++   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='PGUpdate|x64'">
++     <PlatformToolset>v142</PlatformToolset>
++   </PropertyGroup>
++   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='PGUpdate|Win32'">
++     <PlatformToolset>v142</PlatformToolset>
++   </PropertyGroup>
++   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='PGInstrument|x64'">
++     <PlatformToolset>v142</PlatformToolset>
++   </PropertyGroup>
++   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='PGInstrument|Win32'">
++     <PlatformToolset>v142</PlatformToolset>
++   </PropertyGroup>
+    <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+    <PropertyGroup>
+      <TargetExt>.pyd</TargetExt>
+***************
+*** 84,87 ****
+    <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+    <ImportGroup Label="ExtensionTargets">
+    </ImportGroup>
+! </Project>
+--- 109,112 ----
+    <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+    <ImportGroup Label="ExtensionTargets">
+    </ImportGroup>
+! </Project>
+\ No newline at end of file
+diff -crp Python-3.7.5-orig/PCbuild/pyexpat.vcxproj.filters Python-3.7.5/PCbuild/pyexpat.vcxproj.filters
+*** Python-3.7.5-orig/PCbuild/pyexpat.vcxproj.filters	Tue Oct 15 07:32:36 2019
+--- Python-3.7.5/PCbuild/pyexpat.vcxproj.filters	Sun Dec  8 05:39:24 2019
+***************
+*** 30,33 ****
+        <Filter>Source Files</Filter>
+      </ClCompile>
+    </ItemGroup>
+! </Project>
+--- 30,36 ----
+        <Filter>Source Files</Filter>
+      </ClCompile>
+    </ItemGroup>
+!   <ItemGroup>
+!     <ResourceCompile Include="..\PC\python_nt.rc" />
+!   </ItemGroup>
+! </Project>
+\ No newline at end of file
+Only in Python-3.7.5-orig/PCbuild: pyexpat.vcxproj.filters.orig
+Only in Python-3.7.5-orig/PCbuild: pyexpat.vcxproj.filters.rej
+Only in Python-3.7.5-orig/PCbuild: pyexpat.vcxproj.orig
+Only in Python-3.7.5-orig/PCbuild: pyexpat.vcxproj.rej
+diff -crp Python-3.7.5-orig/PCbuild/pylauncher.vcxproj Python-3.7.5/PCbuild/pylauncher.vcxproj
+*** Python-3.7.5-orig/PCbuild/pylauncher.vcxproj	Tue Oct 15 07:32:36 2019
+--- Python-3.7.5/PCbuild/pylauncher.vcxproj	Sun Dec  8 05:39:30 2019
+***************
+*** 39,44 ****
+--- 39,45 ----
+      <RootNamespace>pylauncher</RootNamespace>
+      <TargetName>py</TargetName>
+      <SupportPGO>false</SupportPGO>
++     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    </PropertyGroup>
+    <Import Project="python.props" />
+    <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+***************
+*** 46,51 ****
+--- 47,76 ----
+      <ConfigurationType>Application</ConfigurationType>
+      <CharacterSet>MultiByte</CharacterSet>
+    </PropertyGroup>
++   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
++     <PlatformToolset>v142</PlatformToolset>
++   </PropertyGroup>
++   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
++     <PlatformToolset>v142</PlatformToolset>
++   </PropertyGroup>
++   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
++     <PlatformToolset>v142</PlatformToolset>
++   </PropertyGroup>
++   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
++     <PlatformToolset>v142</PlatformToolset>
++   </PropertyGroup>
++   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='PGUpdate|x64'">
++     <PlatformToolset>v142</PlatformToolset>
++   </PropertyGroup>
++   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='PGUpdate|Win32'">
++     <PlatformToolset>v142</PlatformToolset>
++   </PropertyGroup>
++   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='PGInstrument|x64'">
++     <PlatformToolset>v142</PlatformToolset>
++   </PropertyGroup>
++   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='PGInstrument|Win32'">
++     <PlatformToolset>v142</PlatformToolset>
++   </PropertyGroup>
+    <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+    <ImportGroup Label="ExtensionSettings">
+    </ImportGroup>
+***************
+*** 79,82 ****
+    <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+    <ImportGroup Label="ExtensionTargets">
+    </ImportGroup>
+! </Project>
+--- 104,107 ----
+    <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+    <ImportGroup Label="ExtensionTargets">
+    </ImportGroup>
+! </Project>
+\ No newline at end of file
+Only in Python-3.7.5-orig/PCbuild: pylauncher.vcxproj.orig
+Only in Python-3.7.5-orig/PCbuild: pylauncher.vcxproj.rej
+diff -crp Python-3.7.5-orig/PCbuild/pyshellext.vcxproj Python-3.7.5/PCbuild/pyshellext.vcxproj
+*** Python-3.7.5-orig/PCbuild/pyshellext.vcxproj	Tue Oct 15 07:32:36 2019
+--- Python-3.7.5/PCbuild/pyshellext.vcxproj	Sun Dec  8 05:39:34 2019
+***************
+*** 39,44 ****
+--- 39,45 ----
+      <RootNamespace>pyshellext</RootNamespace>
+      <TargetName>pyshellext</TargetName>
+      <SupportPGO>false</SupportPGO>
++     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    </PropertyGroup>
+    <Import Project="python.props" />
+    <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+***************
+*** 46,51 ****
+--- 47,76 ----
+      <ConfigurationType>DynamicLibrary</ConfigurationType>
+      <CharacterSet>Unicode</CharacterSet>
+    </PropertyGroup>
++   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
++     <PlatformToolset>v142</PlatformToolset>
++   </PropertyGroup>
++   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
++     <PlatformToolset>v142</PlatformToolset>
++   </PropertyGroup>
++   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
++     <PlatformToolset>v142</PlatformToolset>
++   </PropertyGroup>
++   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
++     <PlatformToolset>v142</PlatformToolset>
++   </PropertyGroup>
++   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='PGUpdate|x64'">
++     <PlatformToolset>v142</PlatformToolset>
++   </PropertyGroup>
++   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='PGUpdate|Win32'">
++     <PlatformToolset>v142</PlatformToolset>
++   </PropertyGroup>
++   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='PGInstrument|x64'">
++     <PlatformToolset>v142</PlatformToolset>
++   </PropertyGroup>
++   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='PGInstrument|Win32'">
++     <PlatformToolset>v142</PlatformToolset>
++   </PropertyGroup>
+    <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+    <ImportGroup Label="ExtensionSettings">
+    </ImportGroup>
+Only in Python-3.7.5-orig/PCbuild: pyshellext.vcxproj.orig
+Only in Python-3.7.5-orig/PCbuild: pyshellext.vcxproj.rej
+diff -crp Python-3.7.5-orig/PCbuild/python.vcxproj Python-3.7.5/PCbuild/python.vcxproj
+*** Python-3.7.5-orig/PCbuild/python.vcxproj	Tue Oct 15 07:32:36 2019
+--- Python-3.7.5/PCbuild/python.vcxproj	Sun Dec  8 05:39:10 2019
+***************
+*** 36,41 ****
+--- 36,42 ----
+    </ItemGroup>
+    <PropertyGroup Label="Globals">
+      <ProjectGuid>{B11D750F-CD1F-4A96-85CE-E69A5C5259F9}</ProjectGuid>
++     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    </PropertyGroup>
+    <Import Project="python.props" />
+    <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+***************
+*** 44,49 ****
+--- 45,74 ----
+      <UseOfMfc>false</UseOfMfc>
+      <CharacterSet>MultiByte</CharacterSet>
+    </PropertyGroup>
++   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
++     <PlatformToolset>v142</PlatformToolset>
++   </PropertyGroup>
++   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
++     <PlatformToolset>v142</PlatformToolset>
++   </PropertyGroup>
++   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
++     <PlatformToolset>v142</PlatformToolset>
++   </PropertyGroup>
++   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
++     <PlatformToolset>v142</PlatformToolset>
++   </PropertyGroup>
++   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='PGUpdate|x64'">
++     <PlatformToolset>v142</PlatformToolset>
++   </PropertyGroup>
++   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='PGUpdate|Win32'">
++     <PlatformToolset>v142</PlatformToolset>
++   </PropertyGroup>
++   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='PGInstrument|x64'">
++     <PlatformToolset>v142</PlatformToolset>
++   </PropertyGroup>
++   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='PGInstrument|Win32'">
++     <PlatformToolset>v142</PlatformToolset>
++   </PropertyGroup>
+    <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+    <ImportGroup Label="ExtensionSettings">
+    </ImportGroup>
+***************
+*** 87,95 ****
+        <UcrtName>ucrtbase</UcrtName>
+        <UcrtName Condition="'$(Configuration)' == 'Debug'">ucrtbased</UcrtName>
+      </PropertyGroup>
+!     <Exec Command='setlocal
+! set PYTHONPATH=$(PySourcePath)Lib
+! "$(OutDir)python$(PyDebugExt).exe" "$(PySourcePath)PC\validate_ucrtbase.py" $(UcrtName)' ContinueOnError="true" />
+    </Target>
+    <Target Name="GeneratePythonBat" AfterTargets="AfterBuild">
+      <PropertyGroup>
+--- 112,118 ----
+        <UcrtName>ucrtbase</UcrtName>
+        <UcrtName Condition="'$(Configuration)' == 'Debug'">ucrtbased</UcrtName>
+      </PropertyGroup>
+!     <Exec Command="setlocal&#xD;&#xA;set PYTHONPATH=$(PySourcePath)Lib&#xD;&#xA;&quot;$(OutDir)python$(PyDebugExt).exe&quot; &quot;$(PySourcePath)PC\validate_ucrtbase.py&quot; $(UcrtName)" ContinueOnError="true" />
+    </Target>
+    <Target Name="GeneratePythonBat" AfterTargets="AfterBuild">
+      <PropertyGroup>
+*************** $(_PGOPath)
+*** 112,115 ****
+      </PropertyGroup>
+      <WriteLinesToFile File="$(PySourcePath)python.bat" Lines="$(_Content)" Overwrite="true" Condition="'$(_Content)' != '$(_ExistingContent)'" />
+    </Target>
+! </Project>
+--- 135,138 ----
+      </PropertyGroup>
+      <WriteLinesToFile File="$(PySourcePath)python.bat" Lines="$(_Content)" Overwrite="true" Condition="'$(_Content)' != '$(_ExistingContent)'" />
+    </Target>
+! </Project>
+\ No newline at end of file
+Only in Python-3.7.5-orig/PCbuild: python.vcxproj.orig
+Only in Python-3.7.5-orig/PCbuild: python.vcxproj.rej
+diff -crp Python-3.7.5-orig/PCbuild/python3dll.vcxproj Python-3.7.5/PCbuild/python3dll.vcxproj
+*** Python-3.7.5-orig/PCbuild/python3dll.vcxproj	Tue Oct 15 07:32:36 2019
+--- Python-3.7.5/PCbuild/python3dll.vcxproj	Sun Dec  8 05:39:28 2019
+***************
+*** 40,51 ****
+--- 40,76 ----
+      <Keyword>Win32Proj</Keyword>
+      <TargetName>python3</TargetName>
+      <SupportPGO>false</SupportPGO>
++     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    </PropertyGroup>
+    <Import Project="python.props" />
+    <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+    <PropertyGroup Label="Configuration">
+      <ConfigurationType>DynamicLibrary</ConfigurationType>
+    </PropertyGroup>
++   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
++     <PlatformToolset>v142</PlatformToolset>
++   </PropertyGroup>
++   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
++     <PlatformToolset>v142</PlatformToolset>
++   </PropertyGroup>
++   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
++     <PlatformToolset>v142</PlatformToolset>
++   </PropertyGroup>
++   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
++     <PlatformToolset>v142</PlatformToolset>
++   </PropertyGroup>
++   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='PGUpdate|x64'">
++     <PlatformToolset>v142</PlatformToolset>
++   </PropertyGroup>
++   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='PGUpdate|Win32'">
++     <PlatformToolset>v142</PlatformToolset>
++   </PropertyGroup>
++   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='PGInstrument|x64'">
++     <PlatformToolset>v142</PlatformToolset>
++   </PropertyGroup>
++   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='PGInstrument|Win32'">
++     <PlatformToolset>v142</PlatformToolset>
++   </PropertyGroup>
+    <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+    <ImportGroup Label="ExtensionSettings">
+    </ImportGroup>
+***************
+*** 88,94 ****
+    <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+    <ImportGroup Label="ExtensionTargets">
+    </ImportGroup>
+-   
+    <Target Name="BuildPython3_dDef" BeforeTargets="BuildStubDef" Condition="$(Configuration) == 'Debug'">
+      <ItemGroup>
+        <_DefLines Remove="@(_DefLines)" />
+--- 113,118 ----
+***************
+*** 114,123 ****
+      </ItemGroup>
+      <MakeDir Directories="$(IntDir)" />
+      <Message Text="Updating python3_d.def" Condition="@(_Lines->'%(New)') != @(_OriginalLines)" Importance="high" />
+!     <WriteLinesToFile File="$(IntDir)python3_d.def" Lines="@(_Lines->'%(New)')" Overwrite="true"
+!                       Condition="@(_Lines->'%(New)') != @(_OriginalLines)" />
+    </Target>
+-   
+    <Target Name="BuildStubDef" BeforeTargets="PreLinkEvent">
+      <ItemGroup>
+        <_DefLines Remove="@(_DefLines)" />
+--- 138,145 ----
+      </ItemGroup>
+      <MakeDir Directories="$(IntDir)" />
+      <Message Text="Updating python3_d.def" Condition="@(_Lines->'%(New)') != @(_OriginalLines)" Importance="high" />
+!     <WriteLinesToFile File="$(IntDir)python3_d.def" Lines="@(_Lines->'%(New)')" Overwrite="true" Condition="@(_Lines->'%(New)') != @(_OriginalLines)" />
+    </Target>
+    <Target Name="BuildStubDef" BeforeTargets="PreLinkEvent">
+      <ItemGroup>
+        <_DefLines Remove="@(_DefLines)" />
+***************
+*** 143,149 ****
+      </ItemGroup>
+      <MakeDir Directories="$(IntDir)" />
+      <Message Text="Updating python3stub.def" Condition="@(_Lines) != @(_OriginalLines)" Importance="high" />
+!     <WriteLinesToFile File="$(IntDir)python3stub.def" Lines="@(_Lines)" Overwrite="true"
+!                       Condition="@(_Lines) != @(_OriginalLines)" />
+    </Target>
+  </Project>
+\ No newline at end of file
+--- 165,170 ----
+      </ItemGroup>
+      <MakeDir Directories="$(IntDir)" />
+      <Message Text="Updating python3stub.def" Condition="@(_Lines) != @(_OriginalLines)" Importance="high" />
+!     <WriteLinesToFile File="$(IntDir)python3stub.def" Lines="@(_Lines)" Overwrite="true" Condition="@(_Lines) != @(_OriginalLines)" />
+    </Target>
+  </Project>
+\ No newline at end of file
+Only in Python-3.7.5-orig/PCbuild: python3dll.vcxproj.orig
+Only in Python-3.7.5-orig/PCbuild: python3dll.vcxproj.rej
+diff -crp Python-3.7.5-orig/PCbuild/python_uwp.vcxproj Python-3.7.5/PCbuild/python_uwp.vcxproj
+*** Python-3.7.5-orig/PCbuild/python_uwp.vcxproj	Tue Oct 15 07:32:36 2019
+--- Python-3.7.5/PCbuild/python_uwp.vcxproj	Sun Dec  8 05:39:38 2019
+***************
+*** 36,41 ****
+--- 36,42 ----
+    </ItemGroup>
+    <PropertyGroup Label="Globals">
+      <ProjectGuid>{9DE9E23D-C8D4-4817-92A9-920A8B1FE5FF}</ProjectGuid>
++     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    </PropertyGroup>
+    <Import Project="python.props" />
+    <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+***************
+*** 44,49 ****
+--- 45,74 ----
+      <UseOfMfc>false</UseOfMfc>
+      <CharacterSet>Unicode</CharacterSet>
+    </PropertyGroup>
++   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
++     <PlatformToolset>v142</PlatformToolset>
++   </PropertyGroup>
++   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
++     <PlatformToolset>v142</PlatformToolset>
++   </PropertyGroup>
++   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
++     <PlatformToolset>v142</PlatformToolset>
++   </PropertyGroup>
++   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
++     <PlatformToolset>v142</PlatformToolset>
++   </PropertyGroup>
++   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='PGUpdate|x64'">
++     <PlatformToolset>v142</PlatformToolset>
++   </PropertyGroup>
++   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='PGUpdate|Win32'">
++     <PlatformToolset>v142</PlatformToolset>
++   </PropertyGroup>
++   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='PGInstrument|x64'">
++     <PlatformToolset>v142</PlatformToolset>
++   </PropertyGroup>
++   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='PGInstrument|Win32'">
++     <PlatformToolset>v142</PlatformToolset>
++   </PropertyGroup>
+    <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+    <ImportGroup Label="ExtensionSettings">
+    </ImportGroup>
+***************
+*** 92,95 ****
+    <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+    <ImportGroup Label="ExtensionTargets">
+    </ImportGroup>
+! </Project>
+--- 117,120 ----
+    <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+    <ImportGroup Label="ExtensionTargets">
+    </ImportGroup>
+! </Project>
+\ No newline at end of file
+Only in Python-3.7.5-orig/PCbuild: python_uwp.vcxproj.orig
+Only in Python-3.7.5-orig/PCbuild: python_uwp.vcxproj.rej
+diff -crp Python-3.7.5-orig/PCbuild/pythoncore.vcxproj Python-3.7.5/PCbuild/pythoncore.vcxproj
+*** Python-3.7.5-orig/PCbuild/pythoncore.vcxproj	Tue Oct 15 07:32:36 2019
+--- Python-3.7.5/PCbuild/pythoncore.vcxproj	Sun Dec  8 05:39:11 2019
+***************
+*** 37,42 ****
+--- 37,43 ----
+    <PropertyGroup Label="Globals">
+      <ProjectGuid>{CF7AC3D1-E2DF-41D2-BEA6-1E2556CDEA26}</ProjectGuid>
+      <RootNamespace>pythoncore</RootNamespace>
++     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    </PropertyGroup>
+    <Import Project="python.props" />
+    <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+***************
+*** 44,49 ****
+--- 45,74 ----
+      <ConfigurationType>DynamicLibrary</ConfigurationType>
+      <UseOfMfc>false</UseOfMfc>
+    </PropertyGroup>
++   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
++     <PlatformToolset>v142</PlatformToolset>
++   </PropertyGroup>
++   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
++     <PlatformToolset>v142</PlatformToolset>
++   </PropertyGroup>
++   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
++     <PlatformToolset>v142</PlatformToolset>
++   </PropertyGroup>
++   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
++     <PlatformToolset>v142</PlatformToolset>
++   </PropertyGroup>
++   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='PGUpdate|x64'">
++     <PlatformToolset>v142</PlatformToolset>
++   </PropertyGroup>
++   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='PGUpdate|Win32'">
++     <PlatformToolset>v142</PlatformToolset>
++   </PropertyGroup>
++   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='PGInstrument|x64'">
++     <PlatformToolset>v142</PlatformToolset>
++   </PropertyGroup>
++   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='PGInstrument|Win32'">
++     <PlatformToolset>v142</PlatformToolset>
++   </PropertyGroup>
+    <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+    <ImportGroup Label="ExtensionSettings">
+    </ImportGroup>
+***************
+*** 459,465 ****
+    <Target Name="_WarnAboutZlib" BeforeTargets="PrepareForBuild" Condition="!$(IncludeExternals)">
+      <Warning Text="Not including zlib is not a supported configuration." />
+    </Target>
+- 
+    <PropertyGroup>
+      <VCRedistDir>$(VCInstallDir)\Redist\MSVC\$(VCToolsRedistVersion)\</VCRedistDir>
+      <VCRedistDir Condition="$(Platform) == 'Win32'">$(VCRedistDir)x86\</VCRedistDir>
+--- 484,489 ----
+***************
+*** 474,477 ****
+    <Target Name="_CleanVCRuntime" AfterTargets="Clean">
+      <Delete Files="@(VCRuntimeDLL->'$(OutDir)%(Filename)%(Extension)')" />
+    </Target>
+! </Project>
+--- 498,501 ----
+    <Target Name="_CleanVCRuntime" AfterTargets="Clean">
+      <Delete Files="@(VCRuntimeDLL->'$(OutDir)%(Filename)%(Extension)')" />
+    </Target>
+! </Project>
+\ No newline at end of file
+diff -crp Python-3.7.5-orig/PCbuild/pythoncore.vcxproj.filters Python-3.7.5/PCbuild/pythoncore.vcxproj.filters
+*** Python-3.7.5-orig/PCbuild/pythoncore.vcxproj.filters	Tue Oct 15 07:32:36 2019
+--- Python-3.7.5/PCbuild/pythoncore.vcxproj.filters	Sun Dec  8 05:39:11 2019
+***************
+*** 518,526 ****
+      <ClCompile Include="..\Modules\_pickle.c">
+        <Filter>Modules</Filter>
+      </ClCompile>
+-     <ClCompile Include="..\Modules\_queuemodule.c">
+-       <Filter>Modules</Filter>
+-     </ClCompile>
+      <ClCompile Include="..\Modules\_randommodule.c">
+        <Filter>Modules</Filter>
+      </ClCompile>
+--- 518,523 ----
+***************
+*** 857,865 ****
+      <ClCompile Include="..\Python\compile.c">
+        <Filter>Python</Filter>
+      </ClCompile>
+-     <ClCompile Include="..\Python\context.h">
+-       <Filter>Python</Filter>
+-     </ClCompile>
+      <ClCompile Include="..\Python\dynamic_annotations.c">
+        <Filter>Python</Filter>
+      </ClCompile>
+--- 854,859 ----
+***************
+*** 902,910 ****
+      <ClCompile Include="..\Python\graminit.c">
+        <Filter>Python</Filter>
+      </ClCompile>
+-     <ClCompile Include="..\Python\hamt.h">
+-       <Filter>Python</Filter>
+-     </ClCompile>
+      <ClCompile Include="..\Python\import.c">
+        <Filter>Python</Filter>
+      </ClCompile>
+--- 896,901 ----
+***************
+*** 1013,1021 ****
+      <ClCompile Include="..\Objects\odictobject.c">
+        <Filter>Objects</Filter>
+      </ClCompile>
+-     <ClCompile Include="..\PC\_findvs.cpp">
+-       <Filter>PC</Filter>
+-     </ClCompile>
+      <ClCompile Include="..\Modules\_contextvarsmodule.c">
+        <Filter>Modules</Filter>
+      </ClCompile>
+--- 1004,1009 ----
+***************
+*** 1052,1061 ****
+      <ClCompile Include="$(zlibDir)\zutil.c">
+        <Filter>Modules\zlib</Filter>
+      </ClCompile>
+    </ItemGroup>
+    <ItemGroup>
+      <ResourceCompile Include="..\PC\python_nt.rc">
+        <Filter>Resource Files</Filter>
+      </ResourceCompile>
+    </ItemGroup>
+! </Project>
+--- 1040,1051 ----
+      <ClCompile Include="$(zlibDir)\zutil.c">
+        <Filter>Modules\zlib</Filter>
+      </ClCompile>
++     <ClCompile Include="..\Python\context.c" />
++     <ClCompile Include="..\Python\hamt.c" />
+    </ItemGroup>
+    <ItemGroup>
+      <ResourceCompile Include="..\PC\python_nt.rc">
+        <Filter>Resource Files</Filter>
+      </ResourceCompile>
+    </ItemGroup>
+! </Project>
+\ No newline at end of file
+Only in Python-3.7.5-orig/PCbuild: pythoncore.vcxproj.filters.orig
+Only in Python-3.7.5-orig/PCbuild: pythoncore.vcxproj.filters.rej
+Only in Python-3.7.5-orig/PCbuild: pythoncore.vcxproj.orig
+Only in Python-3.7.5-orig/PCbuild: pythoncore.vcxproj.rej
+diff -crp Python-3.7.5-orig/PCbuild/pythonw.vcxproj Python-3.7.5/PCbuild/pythonw.vcxproj
+*** Python-3.7.5-orig/PCbuild/pythonw.vcxproj	Tue Oct 15 07:32:36 2019
+--- Python-3.7.5/PCbuild/pythonw.vcxproj	Sun Dec  8 05:39:12 2019
+***************
+*** 37,42 ****
+--- 37,43 ----
+    <PropertyGroup Label="Globals">
+      <ProjectGuid>{F4229CC3-873C-49AE-9729-DD308ED4CD4A}</ProjectGuid>
+      <SupportPGO>false</SupportPGO>
++     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    </PropertyGroup>
+    <Import Project="python.props" />
+    <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+***************
+*** 44,49 ****
+--- 45,74 ----
+      <ConfigurationType>Application</ConfigurationType>
+      <UseOfMfc>false</UseOfMfc>
+    </PropertyGroup>
++   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
++     <PlatformToolset>v142</PlatformToolset>
++   </PropertyGroup>
++   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
++     <PlatformToolset>v142</PlatformToolset>
++   </PropertyGroup>
++   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
++     <PlatformToolset>v142</PlatformToolset>
++   </PropertyGroup>
++   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
++     <PlatformToolset>v142</PlatformToolset>
++   </PropertyGroup>
++   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='PGUpdate|x64'">
++     <PlatformToolset>v142</PlatformToolset>
++   </PropertyGroup>
++   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='PGUpdate|Win32'">
++     <PlatformToolset>v142</PlatformToolset>
++   </PropertyGroup>
++   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='PGInstrument|x64'">
++     <PlatformToolset>v142</PlatformToolset>
++   </PropertyGroup>
++   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='PGInstrument|Win32'">
++     <PlatformToolset>v142</PlatformToolset>
++   </PropertyGroup>
+    <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+    <ImportGroup Label="ExtensionSettings">
+    </ImportGroup>
+diff -crp Python-3.7.5-orig/PCbuild/pythonw.vcxproj.filters Python-3.7.5/PCbuild/pythonw.vcxproj.filters
+*** Python-3.7.5-orig/PCbuild/pythonw.vcxproj.filters	Tue Oct 15 07:32:36 2019
+--- Python-3.7.5/PCbuild/pythonw.vcxproj.filters	Sun Dec  8 05:39:12 2019
+***************
+*** 9,17 ****
+      </Filter>
+    </ItemGroup>
+    <ItemGroup>
+!     <ResourceCompile Include="..\PC\python_exe.rc">
+!       <Filter>Resource Files</Filter>
+!     </ResourceCompile>
+    </ItemGroup>
+    <ItemGroup>
+      <ClCompile Include="..\PC\WinMain.c">
+--- 9,15 ----
+      </Filter>
+    </ItemGroup>
+    <ItemGroup>
+!     <ResourceCompile Include="..\PC\pythonw_exe.rc" />
+    </ItemGroup>
+    <ItemGroup>
+      <ClCompile Include="..\PC\WinMain.c">
+Only in Python-3.7.5-orig/PCbuild: pythonw.vcxproj.filters.orig
+Only in Python-3.7.5-orig/PCbuild: pythonw.vcxproj.filters.rej
+Only in Python-3.7.5-orig/PCbuild: pythonw.vcxproj.orig
+Only in Python-3.7.5-orig/PCbuild: pythonw.vcxproj.rej
+diff -crp Python-3.7.5-orig/PCbuild/pythonw_uwp.vcxproj Python-3.7.5/PCbuild/pythonw_uwp.vcxproj
+*** Python-3.7.5-orig/PCbuild/pythonw_uwp.vcxproj	Tue Oct 15 07:32:36 2019
+--- Python-3.7.5/PCbuild/pythonw_uwp.vcxproj	Sun Dec  8 05:39:40 2019
+***************
+*** 36,41 ****
+--- 36,42 ----
+    </ItemGroup>
+    <PropertyGroup Label="Globals">
+      <ProjectGuid>{AB603547-1E2A-45B3-9E09-B04596006393}</ProjectGuid>
++     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    </PropertyGroup>
+    <Import Project="python.props" />
+    <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+***************
+*** 44,49 ****
+--- 45,74 ----
+      <UseOfMfc>false</UseOfMfc>
+      <CharacterSet>Unicode</CharacterSet>
+    </PropertyGroup>
++   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
++     <PlatformToolset>v142</PlatformToolset>
++   </PropertyGroup>
++   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
++     <PlatformToolset>v142</PlatformToolset>
++   </PropertyGroup>
++   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
++     <PlatformToolset>v142</PlatformToolset>
++   </PropertyGroup>
++   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
++     <PlatformToolset>v142</PlatformToolset>
++   </PropertyGroup>
++   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='PGUpdate|x64'">
++     <PlatformToolset>v142</PlatformToolset>
++   </PropertyGroup>
++   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='PGUpdate|Win32'">
++     <PlatformToolset>v142</PlatformToolset>
++   </PropertyGroup>
++   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='PGInstrument|x64'">
++     <PlatformToolset>v142</PlatformToolset>
++   </PropertyGroup>
++   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='PGInstrument|Win32'">
++     <PlatformToolset>v142</PlatformToolset>
++   </PropertyGroup>
+    <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+    <ImportGroup Label="ExtensionSettings">
+    </ImportGroup>
+***************
+*** 83,86 ****
+    <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+    <ImportGroup Label="ExtensionTargets">
+    </ImportGroup>
+! </Project>
+--- 108,111 ----
+    <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+    <ImportGroup Label="ExtensionTargets">
+    </ImportGroup>
+! </Project>
+\ No newline at end of file
+Only in Python-3.7.5-orig/PCbuild: pythonw_uwp.vcxproj.orig
+Only in Python-3.7.5-orig/PCbuild: pythonw_uwp.vcxproj.rej
+diff -crp Python-3.7.5-orig/PCbuild/pywlauncher.vcxproj Python-3.7.5/PCbuild/pywlauncher.vcxproj
+*** Python-3.7.5-orig/PCbuild/pywlauncher.vcxproj	Tue Oct 15 07:32:36 2019
+--- Python-3.7.5/PCbuild/pywlauncher.vcxproj	Sun Dec  8 05:39:30 2019
+***************
+*** 39,44 ****
+--- 39,45 ----
+      <RootNamespace>pywlauncher</RootNamespace>
+      <TargetName>pyw</TargetName>
+      <SupportPGO>false</SupportPGO>
++     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    </PropertyGroup>
+    <Import Project="python.props" />
+    <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+***************
+*** 46,51 ****
+--- 47,76 ----
+      <ConfigurationType>Application</ConfigurationType>
+      <CharacterSet>Unicode</CharacterSet>
+    </PropertyGroup>
++   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
++     <PlatformToolset>v142</PlatformToolset>
++   </PropertyGroup>
++   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
++     <PlatformToolset>v142</PlatformToolset>
++   </PropertyGroup>
++   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
++     <PlatformToolset>v142</PlatformToolset>
++   </PropertyGroup>
++   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
++     <PlatformToolset>v142</PlatformToolset>
++   </PropertyGroup>
++   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='PGUpdate|x64'">
++     <PlatformToolset>v142</PlatformToolset>
++   </PropertyGroup>
++   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='PGUpdate|Win32'">
++     <PlatformToolset>v142</PlatformToolset>
++   </PropertyGroup>
++   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='PGInstrument|x64'">
++     <PlatformToolset>v142</PlatformToolset>
++   </PropertyGroup>
++   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='PGInstrument|Win32'">
++     <PlatformToolset>v142</PlatformToolset>
++   </PropertyGroup>
+    <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+    <ImportGroup Label="ExtensionSettings">
+    </ImportGroup>
+Only in Python-3.7.5-orig/PCbuild: pywlauncher.vcxproj.orig
+Only in Python-3.7.5-orig/PCbuild: pywlauncher.vcxproj.rej
+diff -crp Python-3.7.5-orig/PCbuild/select.vcxproj Python-3.7.5/PCbuild/select.vcxproj
+*** Python-3.7.5-orig/PCbuild/select.vcxproj	Tue Oct 15 07:32:36 2019
+--- Python-3.7.5/PCbuild/select.vcxproj	Sun Dec  8 05:39:22 2019
+***************
+*** 37,42 ****
+--- 37,43 ----
+    <PropertyGroup Label="Globals">
+      <ProjectGuid>{18CAE28C-B454-46C1-87A0-493D91D97F03}</ProjectGuid>
+      <RootNamespace>select</RootNamespace>
++     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    </PropertyGroup>
+    <Import Project="python.props" />
+    <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+***************
+*** 44,49 ****
+--- 45,74 ----
+      <ConfigurationType>DynamicLibrary</ConfigurationType>
+      <CharacterSet>NotSet</CharacterSet>
+    </PropertyGroup>
++   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
++     <PlatformToolset>v142</PlatformToolset>
++   </PropertyGroup>
++   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
++     <PlatformToolset>v142</PlatformToolset>
++   </PropertyGroup>
++   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
++     <PlatformToolset>v142</PlatformToolset>
++   </PropertyGroup>
++   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
++     <PlatformToolset>v142</PlatformToolset>
++   </PropertyGroup>
++   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='PGUpdate|x64'">
++     <PlatformToolset>v142</PlatformToolset>
++   </PropertyGroup>
++   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='PGUpdate|Win32'">
++     <PlatformToolset>v142</PlatformToolset>
++   </PropertyGroup>
++   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='PGInstrument|x64'">
++     <PlatformToolset>v142</PlatformToolset>
++   </PropertyGroup>
++   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='PGInstrument|Win32'">
++     <PlatformToolset>v142</PlatformToolset>
++   </PropertyGroup>
+    <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+    <PropertyGroup>
+      <TargetExt>.pyd</TargetExt>
+diff -crp Python-3.7.5-orig/PCbuild/select.vcxproj.filters Python-3.7.5/PCbuild/select.vcxproj.filters
+*** Python-3.7.5-orig/PCbuild/select.vcxproj.filters	Tue Oct 15 07:32:36 2019
+--- Python-3.7.5/PCbuild/select.vcxproj.filters	Sun Dec  8 05:39:22 2019
+***************
+*** 10,13 ****
+--- 10,16 ----
+        <Filter>Source Files</Filter>
+      </ClCompile>
+    </ItemGroup>
++   <ItemGroup>
++     <ResourceCompile Include="..\PC\python_nt.rc" />
++   </ItemGroup>
+  </Project>
+\ No newline at end of file
+Only in Python-3.7.5-orig/PCbuild: select.vcxproj.filters.orig
+Only in Python-3.7.5-orig/PCbuild: select.vcxproj.filters.rej
+Only in Python-3.7.5-orig/PCbuild: select.vcxproj.orig
+Only in Python-3.7.5-orig/PCbuild: select.vcxproj.rej
+diff -crp Python-3.7.5-orig/PCbuild/sqlite3.vcxproj Python-3.7.5/PCbuild/sqlite3.vcxproj
+*** Python-3.7.5-orig/PCbuild/sqlite3.vcxproj	Tue Oct 15 07:32:36 2019
+--- Python-3.7.5/PCbuild/sqlite3.vcxproj	Sun Dec  8 05:39:26 2019
+***************
+*** 39,44 ****
+--- 39,45 ----
+      <RootNamespace>sqlite3</RootNamespace>
+      <TargetExt>.pyd</TargetExt>
+      <SupportPGO>false</SupportPGO>
++     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    </PropertyGroup>
+    <Import Project="python.props" />
+    <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+***************
+*** 46,51 ****
+--- 47,76 ----
+      <ConfigurationType>DynamicLibrary</ConfigurationType>
+      <CharacterSet>NotSet</CharacterSet>
+    </PropertyGroup>
++   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
++     <PlatformToolset>v142</PlatformToolset>
++   </PropertyGroup>
++   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
++     <PlatformToolset>v142</PlatformToolset>
++   </PropertyGroup>
++   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
++     <PlatformToolset>v142</PlatformToolset>
++   </PropertyGroup>
++   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
++     <PlatformToolset>v142</PlatformToolset>
++   </PropertyGroup>
++   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='PGUpdate|x64'">
++     <PlatformToolset>v142</PlatformToolset>
++   </PropertyGroup>
++   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='PGUpdate|Win32'">
++     <PlatformToolset>v142</PlatformToolset>
++   </PropertyGroup>
++   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='PGInstrument|x64'">
++     <PlatformToolset>v142</PlatformToolset>
++   </PropertyGroup>
++   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='PGInstrument|Win32'">
++     <PlatformToolset>v142</PlatformToolset>
++   </PropertyGroup>
+    <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+    <ImportGroup Label="ExtensionSettings">
+    </ImportGroup>
+***************
+*** 86,89 ****
+    <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+    <ImportGroup Label="ExtensionTargets">
+    </ImportGroup>
+! </Project>
+--- 111,114 ----
+    <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+    <ImportGroup Label="ExtensionTargets">
+    </ImportGroup>
+! </Project>
+\ No newline at end of file
+diff -crp Python-3.7.5-orig/PCbuild/sqlite3.vcxproj.filters Python-3.7.5/PCbuild/sqlite3.vcxproj.filters
+*** Python-3.7.5-orig/PCbuild/sqlite3.vcxproj.filters	Tue Oct 15 07:32:36 2019
+--- Python-3.7.5/PCbuild/sqlite3.vcxproj.filters	Sun Dec  8 05:39:26 2019
+***************
+*** 21,24 ****
+--- 21,27 ----
+        <Filter>Source Files</Filter>
+      </ClCompile>
+    </ItemGroup>
++   <ItemGroup>
++     <ResourceCompile Include="..\PC\sqlite3.rc" />
++   </ItemGroup>
+  </Project>
+\ No newline at end of file
+Only in Python-3.7.5-orig/PCbuild: sqlite3.vcxproj.filters.orig
+Only in Python-3.7.5-orig/PCbuild: sqlite3.vcxproj.filters.rej
+Only in Python-3.7.5-orig/PCbuild: sqlite3.vcxproj.orig
+Only in Python-3.7.5-orig/PCbuild: sqlite3.vcxproj.rej
+diff -crp Python-3.7.5-orig/PCbuild/unicodedata.vcxproj Python-3.7.5/PCbuild/unicodedata.vcxproj
+*** Python-3.7.5-orig/PCbuild/unicodedata.vcxproj	Tue Oct 15 07:32:36 2019
+--- Python-3.7.5/PCbuild/unicodedata.vcxproj	Sun Dec  8 05:39:23 2019
+***************
+*** 38,43 ****
+--- 38,44 ----
+      <ProjectGuid>{ECC7CEAC-A5E5-458E-BB9E-2413CC847881}</ProjectGuid>
+      <RootNamespace>unicodedata</RootNamespace>
+      <Keyword>Win32Proj</Keyword>
++     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    </PropertyGroup>
+    <Import Project="python.props" />
+    <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+***************
+*** 45,50 ****
+--- 46,75 ----
+      <ConfigurationType>DynamicLibrary</ConfigurationType>
+      <CharacterSet>NotSet</CharacterSet>
+    </PropertyGroup>
++   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
++     <PlatformToolset>v142</PlatformToolset>
++   </PropertyGroup>
++   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
++     <PlatformToolset>v142</PlatformToolset>
++   </PropertyGroup>
++   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
++     <PlatformToolset>v142</PlatformToolset>
++   </PropertyGroup>
++   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
++     <PlatformToolset>v142</PlatformToolset>
++   </PropertyGroup>
++   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='PGUpdate|x64'">
++     <PlatformToolset>v142</PlatformToolset>
++   </PropertyGroup>
++   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='PGUpdate|Win32'">
++     <PlatformToolset>v142</PlatformToolset>
++   </PropertyGroup>
++   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='PGInstrument|x64'">
++     <PlatformToolset>v142</PlatformToolset>
++   </PropertyGroup>
++   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='PGInstrument|Win32'">
++     <PlatformToolset>v142</PlatformToolset>
++   </PropertyGroup>
+    <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+    <PropertyGroup>
+      <TargetExt>.pyd</TargetExt>
+diff -crp Python-3.7.5-orig/PCbuild/unicodedata.vcxproj.filters Python-3.7.5/PCbuild/unicodedata.vcxproj.filters
+*** Python-3.7.5-orig/PCbuild/unicodedata.vcxproj.filters	Tue Oct 15 07:32:36 2019
+--- Python-3.7.5/PCbuild/unicodedata.vcxproj.filters	Sun Dec  8 05:39:23 2019
+***************
+*** 21,24 ****
+--- 21,27 ----
+        <Filter>Source Files</Filter>
+      </ClCompile>
+    </ItemGroup>
++   <ItemGroup>
++     <ResourceCompile Include="..\PC\python_nt.rc" />
++   </ItemGroup>
+  </Project>
+\ No newline at end of file
+Only in Python-3.7.5-orig/PCbuild: unicodedata.vcxproj.filters.orig
+Only in Python-3.7.5-orig/PCbuild: unicodedata.vcxproj.filters.rej
+Only in Python-3.7.5-orig/PCbuild: unicodedata.vcxproj.orig
+Only in Python-3.7.5-orig/PCbuild: unicodedata.vcxproj.rej
+diff -crp Python-3.7.5-orig/PCbuild/venvlauncher.vcxproj Python-3.7.5/PCbuild/venvlauncher.vcxproj
+*** Python-3.7.5-orig/PCbuild/venvlauncher.vcxproj	Tue Oct 15 07:32:36 2019
+--- Python-3.7.5/PCbuild/venvlauncher.vcxproj	Sun Dec  8 05:39:39 2019
+***************
+*** 39,44 ****
+--- 39,45 ----
+      <RootNamespace>venvlauncher</RootNamespace>
+      <TargetName>venvlauncher</TargetName>
+      <SupportPGO>false</SupportPGO>
++     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    </PropertyGroup>
+    <Import Project="python.props" />
+    <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+***************
+*** 46,51 ****
+--- 47,76 ----
+      <ConfigurationType>Application</ConfigurationType>
+      <CharacterSet>MultiByte</CharacterSet>
+    </PropertyGroup>
++   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
++     <PlatformToolset>v142</PlatformToolset>
++   </PropertyGroup>
++   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
++     <PlatformToolset>v142</PlatformToolset>
++   </PropertyGroup>
++   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
++     <PlatformToolset>v142</PlatformToolset>
++   </PropertyGroup>
++   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
++     <PlatformToolset>v142</PlatformToolset>
++   </PropertyGroup>
++   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='PGUpdate|x64'">
++     <PlatformToolset>v142</PlatformToolset>
++   </PropertyGroup>
++   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='PGUpdate|Win32'">
++     <PlatformToolset>v142</PlatformToolset>
++   </PropertyGroup>
++   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='PGInstrument|x64'">
++     <PlatformToolset>v142</PlatformToolset>
++   </PropertyGroup>
++   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='PGInstrument|Win32'">
++     <PlatformToolset>v142</PlatformToolset>
++   </PropertyGroup>
+    <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+    <ImportGroup Label="ExtensionSettings">
+    </ImportGroup>
+***************
+*** 82,85 ****
+    <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+    <ImportGroup Label="ExtensionTargets">
+    </ImportGroup>
+! </Project>
+--- 107,110 ----
+    <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+    <ImportGroup Label="ExtensionTargets">
+    </ImportGroup>
+! </Project>
+\ No newline at end of file
+Only in Python-3.7.5-orig/PCbuild: venvlauncher.vcxproj.orig
+Only in Python-3.7.5-orig/PCbuild: venvlauncher.vcxproj.rej
+diff -crp Python-3.7.5-orig/PCbuild/venvwlauncher.vcxproj Python-3.7.5/PCbuild/venvwlauncher.vcxproj
+*** Python-3.7.5-orig/PCbuild/venvwlauncher.vcxproj	Tue Oct 15 07:32:36 2019
+--- Python-3.7.5/PCbuild/venvwlauncher.vcxproj	Sun Dec  8 05:39:39 2019
+***************
+*** 39,44 ****
+--- 39,45 ----
+      <RootNamespace>venvwlauncher</RootNamespace>
+      <TargetName>venvwlauncher</TargetName>
+      <SupportPGO>false</SupportPGO>
++     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    </PropertyGroup>
+    <Import Project="python.props" />
+    <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+***************
+*** 46,51 ****
+--- 47,76 ----
+      <ConfigurationType>Application</ConfigurationType>
+      <CharacterSet>MultiByte</CharacterSet>
+    </PropertyGroup>
++   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
++     <PlatformToolset>v142</PlatformToolset>
++   </PropertyGroup>
++   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
++     <PlatformToolset>v142</PlatformToolset>
++   </PropertyGroup>
++   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
++     <PlatformToolset>v142</PlatformToolset>
++   </PropertyGroup>
++   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
++     <PlatformToolset>v142</PlatformToolset>
++   </PropertyGroup>
++   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='PGUpdate|x64'">
++     <PlatformToolset>v142</PlatformToolset>
++   </PropertyGroup>
++   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='PGUpdate|Win32'">
++     <PlatformToolset>v142</PlatformToolset>
++   </PropertyGroup>
++   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='PGInstrument|x64'">
++     <PlatformToolset>v142</PlatformToolset>
++   </PropertyGroup>
++   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='PGInstrument|Win32'">
++     <PlatformToolset>v142</PlatformToolset>
++   </PropertyGroup>
+    <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+    <ImportGroup Label="ExtensionSettings">
+    </ImportGroup>
+***************
+*** 82,85 ****
+    <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+    <ImportGroup Label="ExtensionTargets">
+    </ImportGroup>
+! </Project>
+--- 107,110 ----
+    <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+    <ImportGroup Label="ExtensionTargets">
+    </ImportGroup>
+! </Project>
+\ No newline at end of file
+Only in Python-3.7.5-orig/PCbuild: venvwlauncher.vcxproj.orig
+Only in Python-3.7.5-orig/PCbuild: venvwlauncher.vcxproj.rej
+diff -crp Python-3.7.5-orig/PCbuild/winsound.vcxproj Python-3.7.5/PCbuild/winsound.vcxproj
+*** Python-3.7.5-orig/PCbuild/winsound.vcxproj	Tue Oct 15 07:32:36 2019
+--- Python-3.7.5/PCbuild/winsound.vcxproj	Sun Dec  8 05:39:12 2019
+***************
+*** 38,43 ****
+--- 38,44 ----
+      <ProjectGuid>{28B5D777-DDF2-4B6B-B34F-31D938813856}</ProjectGuid>
+      <RootNamespace>winsound</RootNamespace>
+      <Keyword>Win32Proj</Keyword>
++     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    </PropertyGroup>
+    <Import Project="python.props" />
+    <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+***************
+*** 45,50 ****
+--- 46,75 ----
+      <ConfigurationType>DynamicLibrary</ConfigurationType>
+      <CharacterSet>NotSet</CharacterSet>
+    </PropertyGroup>
++   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
++     <PlatformToolset>v142</PlatformToolset>
++   </PropertyGroup>
++   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
++     <PlatformToolset>v142</PlatformToolset>
++   </PropertyGroup>
++   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
++     <PlatformToolset>v142</PlatformToolset>
++   </PropertyGroup>
++   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
++     <PlatformToolset>v142</PlatformToolset>
++   </PropertyGroup>
++   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='PGUpdate|x64'">
++     <PlatformToolset>v142</PlatformToolset>
++   </PropertyGroup>
++   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='PGUpdate|Win32'">
++     <PlatformToolset>v142</PlatformToolset>
++   </PropertyGroup>
++   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='PGInstrument|x64'">
++     <PlatformToolset>v142</PlatformToolset>
++   </PropertyGroup>
++   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='PGInstrument|Win32'">
++     <PlatformToolset>v142</PlatformToolset>
++   </PropertyGroup>
+    <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+    <PropertyGroup>
+      <TargetExt>.pyd</TargetExt>
+diff -crp Python-3.7.5-orig/PCbuild/winsound.vcxproj.filters Python-3.7.5/PCbuild/winsound.vcxproj.filters
+*** Python-3.7.5-orig/PCbuild/winsound.vcxproj.filters	Tue Oct 15 07:32:36 2019
+--- Python-3.7.5/PCbuild/winsound.vcxproj.filters	Sun Dec  8 05:39:12 2019
+***************
+*** 11,14 ****
+--- 11,17 ----
+        <Filter>Source Files</Filter>
+      </ClCompile>
+    </ItemGroup>
++   <ItemGroup>
++     <ResourceCompile Include="..\PC\python_nt.rc" />
++   </ItemGroup>
+  </Project>
+\ No newline at end of file
+Only in Python-3.7.5-orig/PCbuild: winsound.vcxproj.filters.orig
+Only in Python-3.7.5-orig/PCbuild: winsound.vcxproj.filters.rej
+Only in Python-3.7.5-orig/PCbuild: winsound.vcxproj.orig
+Only in Python-3.7.5-orig/PCbuild: winsound.vcxproj.rej
+diff -crp Python-3.7.5-orig/PCbuild/xxlimited.vcxproj Python-3.7.5/PCbuild/xxlimited.vcxproj
+*** Python-3.7.5-orig/PCbuild/xxlimited.vcxproj	Tue Oct 15 07:32:36 2019
+--- Python-3.7.5/PCbuild/xxlimited.vcxproj	Sun Dec  8 05:39:28 2019
+***************
+*** 38,43 ****
+--- 38,44 ----
+      <ProjectGuid>{F749B822-B489-4CA5-A3AD-CE078F5F338A}</ProjectGuid>
+      <RootNamespace>xxlimited</RootNamespace>
+      <Keyword>Win32Proj</Keyword>
++     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    </PropertyGroup>
+    <Import Project="python.props" />
+    <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+***************
+*** 46,51 ****
+--- 47,76 ----
+      <CharacterSet>NotSet</CharacterSet>
+      <SupportPGO>false</SupportPGO>
+    </PropertyGroup>
++   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
++     <PlatformToolset>v142</PlatformToolset>
++   </PropertyGroup>
++   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
++     <PlatformToolset>v142</PlatformToolset>
++   </PropertyGroup>
++   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
++     <PlatformToolset>v142</PlatformToolset>
++   </PropertyGroup>
++   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
++     <PlatformToolset>v142</PlatformToolset>
++   </PropertyGroup>
++   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='PGUpdate|x64'">
++     <PlatformToolset>v142</PlatformToolset>
++   </PropertyGroup>
++   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='PGUpdate|Win32'">
++     <PlatformToolset>v142</PlatformToolset>
++   </PropertyGroup>
++   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='PGInstrument|x64'">
++     <PlatformToolset>v142</PlatformToolset>
++   </PropertyGroup>
++   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='PGInstrument|Win32'">
++     <PlatformToolset>v142</PlatformToolset>
++   </PropertyGroup>
+    <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+    <PropertyGroup>
+      <TargetExt>.pyd</TargetExt>
+Only in Python-3.7.5-orig/PCbuild: xxlimited.vcxproj.orig
+Only in Python-3.7.5-orig/PCbuild: xxlimited.vcxproj.rej
